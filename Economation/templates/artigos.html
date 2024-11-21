@@ -1,80 +1,84 @@
-{% load static %}
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Economation - Artigos</title>
-    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <title>Economation</title>
+    <link rel="stylesheet" href="../static/styles.css">
 </head>
 <body>
     <!-- Cabeçalho -->
-    <header>
-        <div class="header">
-            <div class="logo-container">
-                <img src="{% static 'images/logo.png' %}" alt="Logo Economation" class="logo">
-                <h1>Economation</h1>
-            </div>
-            <nav>
-                <a href="#">Início</a>
-                <a href="{% url 'noticias' %}">Notícias</a>
-                <a href="{% url 'artigos' %}" class="active">Artigos</a>
-                <a href="#">Jogos</a>
-            </nav>
+    <header class="header">
+        <div class="logo-container">
+            <img src="logo.png" alt="Logo" class="logo">
+            <h1>Economation</h1>
         </div>
+        <nav>
+            <a href="#">Início</a>
+            <a href="#">Notícias</a>
+            <a href="#">Artigos</a>
+            <a href="#">Jogos</a>
+        </nav>
+        <div class="user-circle"></div>
     </header>
 
-    <!-- Conteúdo principal -->
-    <main>
-        <div class="actions">
-            <!-- Botão Filtros com Ícone -->
-            <button class="filter-button">
-                <img src="{% static 'images/filter.png' %}" alt="Ícone Filtros">
-                Filtros
-            </button>
+    <!-- Seção de Busca -->
+    <section class="search-section">
+        <input type="text" placeholder="Buscar..." class="search-input">
+        <button class="search-button">Buscar</button>
+    </section>
 
-            <!-- Campo de busca e botão -->
-            <input type="text" placeholder="Buscar">
-            <button class="search-button">Buscar</button>
-        </div>
-
-            <!-- Grid de Artigos -->
-            <div class="artigos-grid">
-                <a href="https://www.youtube.com/watch?v=z64HBkLIsMY" target="_blank" class="artigo-item">
-                    <img src="{% static 'images/bitcoin2.png' %}" alt="Bitcoin">
-                    <h3>BITCOIN</h3>
-                    <p>O que é, como surgiu?</p>
-                </a>
-                <a href="https://www.youtube.com/watch?app=desktop&v=qvcNoZqF4XI" target="_blank" class="artigo-item">
-                    <img src="{% static 'images/tributos.png' %}" alt="Tributos">
-                    <h3>TRIBUTOS</h3>
-                    <p>O que são e tipos?</p>
-                </a>
-                <a href="https://www.youtube.com/watch?v=0us8Oq7TeUg&t=251s" target="_blank" class="artigo-item">
-                    <img src="{% static 'images/inflacao.png' %}" alt="Inflação">
-                    <h3>INFLAÇÃO</h3>
-                    <p>Como surgiu?</p>
-                </a>
-                <a href="https://www.youtube.com/watch?v=fCvCiyHhi5s" target="_blank" class="artigo-item">
-                    <img src="{% static 'images/bf.png' %}" alt="Black Friday">
-                    <h3>BLACK FRIDAY</h3>
-                    <p>Origem</p>
-                </a>
-                <a href="https://www.youtube.com/watch?v=Nj0AN2p1coQ" target="_blank" class="artigo-item">
-                    <img src="{% static 'images/economia.png' %}" alt="Economia">
-                    <h3>ECONOMIA</h3>
-                    <p>O que é?</p>
-                </a>
-                <a href="https://www.youtube.com/watch?v=WqByBgcMWAA" target="_blank" class="artigo-item">
-                    <img src="{% static 'images/taxajuros.png' %}" alt="Taxa de Juros">
-                    <h3>TAXA DE JUROS</h3>
-                    <p>Explicação</p>
-                </a>
+    <!-- Seção de Temas -->
+    <section class="topics-section">
+        <div class="topics-container">
+            <h2>Encontre seus temas favoritos!</h2>
+            <div class="topics-buttons">
+                <button class="topic-button">Finanças</button>
+                <button class="topic-button">Inovação</button>
+                <button class="topic-button">Tecnologia</button>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Botão "Veja Mais" -->
-        <button class="ver-mais">Veja Mais</button>
-    </main>
+    <!-- Seção de Conhecimento -->
+    <section class="knowledge-section">
+        <h2>Você sabe o que é?</h2>
+        <div class="knowledge-cards">
+            <div class="card">
+                <h3>Tema X</h3>
+                <p>Subtítulo XXX</p>
+            </div>
+            <div class="card">
+                <h3>Tema X</h3>
+                <p>Subtítulo XXX</p>
+            </div>
+            <div class="card">
+                <h3>Tema X</h3>
+                <p>Subtítulo XXX</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Aprendizado -->
+    <section class="learn-more-section">
+        <h2>Quer aprender mais?</h2>
+        <div class="podium">
+            <div class="podium-item"></div>
+            <div class="podium-item"></div>
+            <div class="podium-item"></div>
+        </div>
+        <button class="enter-button">ENTRE NO PÓDIO</button>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>Sobre Nós</p>
+            <p>Suporte</p>
+            <p>Email: economation@gmail.com</p>
+            <p>@economation</p>
+        </div>
+    </footer>
 </body>
 </html>
