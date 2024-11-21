@@ -1,4 +1,4 @@
-/* Configurações gerais */
+#/* Configurações gerais */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -27,21 +27,16 @@ body {
     margin-right: 10px;
 }
 
-.header h1 {
-    margin: 0;
-    font-size: 28px;
-}
-
 .user-circle {
-    position: fixed; /* Fixado dentro da viewport */
-    right: 20px; /* Alinhado à direita */
-    top: 20px; /* Alinhado no topo */
+    position: fixed;
+    right: 20px;
+    top: 20px;
     width: 40px;
     height: 40px;
     background-color: white;
     border-radius: 50%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    z-index: 100; /* Certifica-se de que o círculo fique visível acima de outros elementos */
+    z-index: 100;
 }
 
 nav {
@@ -60,46 +55,23 @@ nav a {
 }
 
 nav a:hover {
-    transform: translateY(-3px); /* Texto sobe ao passar o mouse */
+    transform: translateY(-3px);
 }
 
-/* Seção de Filtros e Busca */
-.actions {
+/* Seção de Busca */
+.search-section {
     display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: space-between;
-    padding: 15px 20px;
-    max-width: 1000px;
-    margin: 0 auto;
-    gap: 15px;
+    padding: 20px;
+    background-color: #f0f0f0;
 }
 
-.filter-button {
-    display: flex;
-    align-items: center;
-    gap: 8px; /* Espaço entre o ícone e o texto */
-    background: none;
-    border: none;
-    color: #001f3f;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-.filter-button img {
-    width: 20px;
-    height: 20px;
-}
-
-.filter-button:hover {
-    color: #004080; /* Leve destaque ao passar o mouse */
-}
-
-input[type="text"] {
+.search-input {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 14px;
-    flex: 1; /* Ajusta para ocupar espaço flexível */
 }
 
 .search-button {
@@ -109,215 +81,116 @@ input[type="text"] {
     border-radius: 5px;
     padding: 10px 20px;
     font-size: 14px;
+    margin-left: 10px;
     cursor: pointer;
-    transition: background-color 0.3s;
 }
 
 .search-button:hover {
     background-color: #004080;
 }
 
-
-/* Configuração do grid para o layout */
-.grid {
-  display: grid;
-  grid-template-areas:
-    "grande pequeno1"
-    "grande pequeno2";
-  grid-template-columns: 2fr 1fr;
-  gap: 10px;
-  margin: 20px;
-}
-
-.item {
-  position: relative;
-}
-
-.item img {
-  width: 100%;
-  height: auto;
-  border-radius: 5px;
-  transition: transform 0.3s;
-}
-
-.item img:hover {
-  transform: scale(1.05);
-}
-
-/* Estilo para a imagem maior */
-.grande {
-  grid-area: grande;
-}
-
-/* Estilo para as imagens menores */
-.pequeno1 {
-  grid-area: pequeno1;
-}
-
-.pequeno2 {
-  grid-area: pequeno2;
-}
-
-/* Lista de notícias */
-.noticias-lista {
-    margin-top: 40px;
-    padding: 0 20px;
-    max-width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.noticia {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-    background: #ffffff;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
-    width: calc(100% - 40px); /* Ocupa toda a largura com espaçamento */
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.noticia:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-}
-
-.noticia a {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: inherit;
-    width: 100%;
-}
-
-.noticia img {
-    width: 120px;
-    height: 120px;
-    object-fit: cover;
-    border-radius: 10px;
-    margin-right: 15px;
-    transition: transform 0.3s;
-}
-
-.noticia img:hover {
-    transform: scale(1.1);
-}
-
-.noticia-texto {
-    flex: 1;
-}
-
-.noticia-texto .titulo {
-    font-size: 16px;
-    font-weight: bold;
-    margin: 0 0 5px;
-}
-
-.noticia-texto .data {
-    font-size: 14px;
-    color: gray;
-    margin: 0;
-}
-
-/* Linha separadora */
-hr {
-    border: 0;
-    border-top: 1px solid #ddd;
-    margin: 15px 0;
-}
-
-/* Botão "Veja Mais" */
-.ver-mais {
-    display: block;
-    margin: 30px auto;
-    padding: 10px 20px;
-    background-color: #004080;
+/* Seção de Temas */
+.topics-section {
+    background-color: #001f3f;
     color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.ver-mais:hover {
-    background-color: #002f5f;
-}
-
-/* Grid de Artigos */
-.artigos-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Configura 3 colunas fixas */
-    gap: 20px; /* Espaçamento entre os itens */
-    margin: 20px auto;
-    max-width: 1000px;
-}
-
-.artigo-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     text-align: center;
-    background: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 15px;
-    text-decoration: none;
-    color: inherit;
-    transition: transform 0.3s, box-shadow 0.3s;
+    padding: 40px 20px;
 }
 
-.artigo-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+.topics-container h2 {
+    margin-bottom: 20px;
 }
 
-.artigo-item img {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    border-radius: 10px;
-    margin-bottom: 15px;
-    transition: transform 0.3s;
+.topics-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 
-.artigo-item img:hover {
-    transform: scale(1.1);
-}
-
-.artigo-item h3 {
-    font-size: 18px;
-    margin: 0 0 5px;
-    color: #004080;
-    font-weight: bold;
-}
-
-.artigo-item p {
-    font-size: 14px;
-    color: gray;
-    margin: 0;
-}
-
-/* Botão "Veja Mais" */
-.ver-mais {
-    display: block;
-    margin: 30px auto;
-    padding: 10px 20px;
+.topic-button {
     background-color: #004080;
     color: white;
     border: none;
+    padding: 10px 20px;
     border-radius: 5px;
-    font-size: 16px;
     cursor: pointer;
-    transition: background-color 0.3s;
-    max-width: 200px;
+    font-size: 16px;
 }
 
-.ver-mais:hover {
+.topic-button:hover {
     background-color: #002f5f;
 }
 
+/* Seção de Conhecimento */
+.knowledge-section {
+    background-color: #e0e7ef;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.knowledge-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Seção de Aprendizado */
+.learn-more-section {
+    background-color: #f0f0f0;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.podium {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.podium-item {
+    background-color: #001f3f;
+    width: 60px;
+    height: 100px;
+    border-radius: 5px;
+}
+
+.enter-button {
+    background-color: #004080;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.enter-button:hover {
+    background-color: #002f5f;
+}
+
+/* Rodapé */
+.footer {
+    background-color: #001f3f;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer-content p {
+    margin: 5px 0;
+}

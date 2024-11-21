@@ -1,9 +1,8 @@
-from django.contrib import admin
+
 from django.urls import path
-from Economation import views  
+from economation import views
+from django.contrib import admin
 
 urlpatterns = [
-    path('', views.noticias, name='noticias'),  
-    path('artigos/', views.artigos, name='artigos'),
-    path('admin/', admin.site.urls),  
+    path('', views.inicio, name='inicio'),  
 ]
