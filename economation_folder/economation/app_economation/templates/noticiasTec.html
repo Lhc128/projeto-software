@@ -1,0 +1,179 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notícias - Tecnologia</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <div class="header" style= "background-color: #0125A6;">
+            <div class="logo-container">
+                <img src="{% static 'images/logo.png' %}" alt="Logo Economation" class="logo">
+                <h1>Economation</h1>
+            </div>
+            <nav>
+                <a href="#">Início</a>
+                <a href="{% url 'noticias' %}" class="active">Notícias</a>
+                <a href="{% url 'artigos' %}">Artigos</a>
+                <a href="#">Jogos</a>
+            </nav>
+            <div class="user-circle"></div>
+        </div>
+    </header>
+
+    <!-- Conteúdo principal -->
+    <main>
+        <div class="filtro-busca">
+            <!-- Dropdown Filtros -->
+        <div class="dropdown">
+            <button class="filter-button" onclick="toggleDropdown()"> 
+                <img src="{% static 'images/filter.png' %}" alt="Ícone Filtros"> Filtros 
+            </button>
+            <div id="dropdown-options" class="dropdown-content">
+                <a href="{% url 'noticiasInov' %}">
+                    <img src="{% static 'images/inovacao.png' %}" alt="Inovação" class="filter-image">
+                </a>
+                <a href="{% url 'noticiasTec' %}">
+                    <img src="{% static 'images/tecnologia.png' %}" alt="Tecnologia" class="filter-image">
+                </a>
+                <a href="{% url 'noticiasFin' %}">
+                    <img src="{% static 'images/financas.png' %}" alt="Finanças" class="filter-image">
+                </a>
+            </div>
+        </div>
+
+        <!-- Campo de busca -->
+        <div class="btn-buscar">
+            <input type="text" placeholder="Digite aqui">
+            <button class="search-button" style= "background-color: #0125A6;">Buscar</button>
+        </div>
+    </div>
+
+        <!-- Grid de imagens principais -->
+        <div class="grid">
+            <div class="item grande">
+                <a href="https://thenews.waffle.com.br/variada/o-jornal-britanico-que-decidiu-boicotar-o-x?utm_source=the_news&utm_medium=newsletter&utm_campaign=14-11-2024" target="_blank">
+                    <img src="{% static 'images/twitter.png' %}" alt="O jornal britânico que decidiu boicotar o X">
+                </a>
+            </div>
+            <div class="item pequeno1">
+                <a href="https://thenews.waffle.com.br/tecnologia/amazon-quer-equipar-os-entregadores-com-oculos-high-tech?utm_source=the_news&utm_medium=newsletter&utm_campaign=13-11-2024" target="_blank">
+                    <img src="{% static 'images/amazon.png' %}" alt="Amazon quer equipar os entregadores com óculos high-tech">
+                </a>
+            </div>
+            <div class="item pequeno2">
+                <a href="https://thenews.waffle.com.br/tecnologia/tiktok-para-o-youtube-pode-copiar-so-nao-faz-igual?utm_source=the_news&utm_medium=newsletter&utm_campaign=15-11-2024" target="_blank">
+                    <img src="{% static 'images/tiktok.png' %}" alt="TikTok para o YouTube: “Pode copiar, só não faz igual">
+                </a>
+            </div>
+        </div>
+
+        <!-- Lista de notícias inicial -->
+        <section id="conteudo-principal" class="noticias-lista">
+            <div class="noticia">
+                <a href="https://thenews.waffle.com.br/variada/o-jornal-britanico-que-decidiu-boicotar-o-x?utm_source=the_news&utm_medium=newsletter&utm_campaign=14-11-2024" target="_blank">
+                    <img src="{% static 'images/twitter.png' %}" alt="O jornal britânico que decidiu boicotar o X">
+                    <div class="noticia-texto">
+                        <p class="titulo">O jornal britânico que decidiu boicotar o X</p>
+                        <p class="data">14/11/2024</p>
+                    </div>
+                </a>
+            </div>
+            <hr>
+            <div class="noticia">
+                <a href="https://thenews.waffle.com.br/tecnologia/amazon-quer-equipar-os-entregadores-com-oculos-high-tech?utm_source=the_news&utm_medium=newsletter&utm_campaign=13-11-2024" target="_blank">
+                    <img src="{% static 'images/amazon.png' %}" alt="Amazon quer equipar os entregadores com óculos high-tech">
+                    <div class="noticia-texto">
+                        <p class="titulo">Amazon quer equipar os entregadores com óculos high-tech</p>
+                        <p class="data">13/11/2024</p>
+                    </div>
+                </a>
+            </div>
+            <hr>
+            <div class="noticia">
+                <a href="https://thenews.waffle.com.br/tecnologia/tiktok-para-o-youtube-pode-copiar-so-nao-faz-igual?utm_source=the_news&utm_medium=newsletter&utm_campaign=15-11-2024" target="_blank">
+                    <img src="{% static 'images/tiktok.png' %}" alt="TikTok para o YouTube: “Pode copiar, só não faz igual">
+                    <div class="noticia-texto">
+                        <p class="titulo">TikTok para o YouTube: “Pode copiar, só não faz igual</p>
+                        <p class="data">15/11/2024</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Conteúdo adicional escondido -->
+        <section id="conteudo-adicional" class="noticias-lista" style="display: none;">
+            <div class="noticia">
+                <a href="https://thenews.waffle.com.br/variada/o-jornal-britanico-que-decidiu-boicotar-o-x?utm_source=the_news&utm_medium=newsletter&utm_campaign=14-11-2024" target="_blank">
+                    <img src="{% static 'images/twitter.png' %}" alt="O jornal britânico que decidiu boicotar o X">
+                    <div class="noticia-texto">
+                        <p class="titulo">O jornal britânico que decidiu boicotar o X</p>
+                        <p class="data">14/11/2024</p>
+                    </div>
+                </a>
+            </div>
+            <hr>
+            <div class="noticia">
+                <a href="https://thenews.waffle.com.br/tecnologia/amazon-quer-equipar-os-entregadores-com-oculos-high-tech?utm_source=the_news&utm_medium=newsletter&utm_campaign=13-11-2024" target="_blank">
+                    <img src="{% static 'images/amazon.png' %}" alt="Amazon quer equipar os entregadores com óculos high-tech">
+                    <div class="noticia-texto">
+                        <p class="titulo">Amazon quer equipar os entregadores com óculos high-tech</p>
+                        <p class="data">13/11/2024</p>
+                    </div>
+                </a>
+            </div>
+            <hr>
+            <div class="noticia">
+                <a href="https://thenews.waffle.com.br/tecnologia/tiktok-para-o-youtube-pode-copiar-so-nao-faz-igual?utm_source=the_news&utm_medium=newsletter&utm_campaign=15-11-2024" target="_blank">
+                    <img src="{% static 'images/tiktok.png' %}" alt="TikTok para o YouTube: “Pode copiar, só não faz igual">
+                    <div class="noticia-texto">
+                        <p class="titulo">TikTok para o YouTube: “Pode copiar, só não faz igual</p>
+                        <p class="data">15/11/2024</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Botão "Ver Mais" -->
+        <button id="ver-mais" class="ver-mais" style= "background-color: #0125A6;">Ver Mais</button>
+    </main>
+
+     <!-- JavaScript para "Ver Mais" -->
+     <script>
+        function toggleDropdown() {
+            const dropdown = document.getElementById("dropdown-options");
+            dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+        }
+    
+        // Fecha o dropdown se clicar fora
+        window.onclick = function (event) {
+            const dropdown = document.getElementById("dropdown-options");
+            if (!event.target.closest(".filter-button") && !event.target.closest(".dropdown-content")) {
+                dropdown.style.display = "none";
+            }
+        };
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const verMaisBtn = document.getElementById("ver-mais");
+            const conteudoAdicional = document.getElementById("conteudo-adicional");
+    
+            if (verMaisBtn && conteudoAdicional) {
+                verMaisBtn.addEventListener("click", function () {
+                    if (conteudoAdicional.style.display === "none") {
+                        conteudoAdicional.style.display = "block"; // Mostra o conteúdo adicional
+                        verMaisBtn.textContent = "Ver Menos"; // Altera o texto do botão
+                    } else {
+                        conteudoAdicional.style.display = "none"; // Esconde o conteúdo adicional
+                        verMaisBtn.textContent = "Ver Mais"; // Volta para "Ver Mais"
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

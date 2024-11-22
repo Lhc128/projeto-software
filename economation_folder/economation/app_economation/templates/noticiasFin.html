@@ -1,0 +1,179 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notícias - Finanças</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <div class="header" style= "background-color: #DD9B06;">
+            <div class="logo-container">
+                <img src="{% static 'images/logo.png' %}" alt="Logo Economation" class="logo">
+                <h1>Economation</h1>
+            </div>
+            <nav>
+                <a href="#">Início</a>
+                <a href="{% url 'noticias' %}" class="active">Notícias</a>
+                <a href="{% url 'artigos' %}">Artigos</a>
+                <a href="#">Jogos</a>
+            </nav>
+            <div class="user-circle"></div>
+        </div>
+    </header>
+
+    <!-- Conteúdo principal -->
+    <main>
+        <div class="filtro-busca">
+            <!-- Dropdown Filtros -->
+        <div class="dropdown">
+            <button class="filter-button" onclick="toggleDropdown()"> 
+                <img src="{% static 'images/filter.png' %}" alt="Ícone Filtros"> Filtros 
+            </button>
+            <div id="dropdown-options" class="dropdown-content">
+                <a href="{% url 'noticiasInov' %}">
+                    <img src="{% static 'images/inovacao.png' %}" alt="Inovação" class="filter-image">
+                </a>
+                <a href="{% url 'noticiasTec' %}">
+                    <img src="{% static 'images/tecnologia.png' %}" alt="Tecnologia" class="filter-image">
+                </a>
+                <a href="{% url 'noticiasFin' %}">
+                    <img src="{% static 'images/financas.png' %}" alt="Finanças" class="filter-image">
+                </a>
+            </div>
+        </div>
+
+        <!-- Campo de busca -->
+        <div class="btn-buscar">
+            <input type="text" placeholder="Digite aqui">
+            <button class="search-button" style= "background-color: #DD9B06;">Buscar</button>
+        </div>
+    </div>
+
+        <!-- Grid de imagens principais -->
+        <div class="grid">
+            <div class="item grande">
+                <a href="https://thenews.waffle.com.br/economia/a-america-latina-ja-nao-e-mais-so-o-quintal-dos-eua?utm_source=the_news&utm_medium=newsletter&utm_campaign=16-11-2024" target="_blank">
+                    <img src="{% static 'images/mundo.png' %}" alt="A América Latina já não é mais (só) o quintal dos EUA">
+                </a>
+            </div>
+            <div class="item pequeno1">
+                <a href="https://thenews.waffle.com.br/mundo/imigracao-para-paises-ricos-chega-ao-maior-patamar-da-historia?utm_source=the_news&utm_medium=newsletter&utm_campaign=15-11-2024" target="_blank">
+                    <img src="{% static 'images/migrat.png' %}" alt="Imigração para países ricos chega ao maior patamar da história">
+                </a>
+            </div>
+            <div class="item pequeno2">
+                <a href="https://thenews.waffle.com.br/brasil/a-polemica-pec-da-escala-6x1-foi-oficialmente-para-a-camara?utm_source=the_news&utm_medium=newsletter&utm_campaign=14-11-2024" target="_blank">
+                    <img src="{% static 'images/pol.png' %}" alt="A polêmica PEC da escala 6x1 foi oficialmente para a Câmara">
+                </a>
+            </div>
+        </div>
+
+        <!-- Lista de notícias inicial -->
+        <section id="conteudo-principal" class="noticias-lista">
+            <div class="noticia">
+                <a href="https://thenews.waffle.com.br/economia/a-america-latina-ja-nao-e-mais-so-o-quintal-dos-eua?utm_source=the_news&utm_medium=newsletter&utm_campaign=16-11-2024" target="_blank">
+                    <img src="{% static 'images/mundo.png' %}" alt="A América Latina já não é mais (só) o quintal dos EUA">
+                    <div class="noticia-texto">
+                        <p class="titulo">A América Latina já não é mais (só) o quintal dos EUA</p>
+                        <p class="data">15/11/2024</p>
+                    </div>
+                </a>
+            </div>
+            <hr>
+            <div class="noticia">
+                <a href="https://thenews.waffle.com.br/mundo/imigracao-para-paises-ricos-chega-ao-maior-patamar-da-historia?utm_source=the_news&utm_medium=newsletter&utm_campaign=15-11-2024" target="_blank">
+                    <img src="{% static 'images/migrat.png' %}" alt="Bitcoin bate US$ 80K">
+                    <div class="noticia-texto">
+                        <p class="titulo">Imigração para países ricos chega ao maior patamar da história</p>
+                        <p class="data">15/11/2024</p>
+                    </div>
+                </a>
+            </div>
+            <hr>
+            <div class="noticia">
+                <a href="https://thenews.waffle.com.br/brasil/a-polemica-pec-da-escala-6x1-foi-oficialmente-para-a-camara?utm_source=the_news&utm_medium=newsletter&utm_campaign=14-11-2024" target="_blank">
+                    <img src="{% static 'images/pol.png' %}" alt="A polêmica PEC da escala 6x1 foi oficialmente para a Câmara">
+                    <div class="noticia-texto">
+                        <p class="titulo">A polêmica PEC da escala 6x1 foi oficialmente para a Câmara</p>
+                        <p class="data">14/11/2024</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Conteúdo adicional escondido -->
+        <section id="conteudo-adicional" class="noticias-lista" style="display: none;">
+            <div class="noticia">
+                <a href="https://thenews.waffle.com.br/economia/a-america-latina-ja-nao-e-mais-so-o-quintal-dos-eua?utm_source=the_news&utm_medium=newsletter&utm_campaign=16-11-2024" target="_blank">
+                    <img src="{% static 'images/mundo.png' %}" alt="A América Latina já não é mais (só) o quintal dos EUA">
+                    <div class="noticia-texto">
+                        <p class="titulo">A América Latina já não é mais (só) o quintal dos EUA</p>
+                        <p class="data">15/11/2024</p>
+                    </div>
+                </a>
+            </div>
+            <hr>
+            <div class="noticia">
+                <a href="https://thenews.waffle.com.br/mundo/imigracao-para-paises-ricos-chega-ao-maior-patamar-da-historia?utm_source=the_news&utm_medium=newsletter&utm_campaign=15-11-2024" target="_blank">
+                    <img src="{% static 'images/migrat.png' %}" alt="Bitcoin bate US$ 80K">
+                    <div class="noticia-texto">
+                        <p class="titulo">Imigração para países ricos chega ao maior patamar da história</p>
+                        <p class="data">15/11/2024</p>
+                    </div>
+                </a>
+            </div>
+            <hr>
+            <div class="noticia">
+                <a href="https://thenews.waffle.com.br/brasil/a-polemica-pec-da-escala-6x1-foi-oficialmente-para-a-camara?utm_source=the_news&utm_medium=newsletter&utm_campaign=14-11-2024" target="_blank">
+                    <img src="{% static 'images/pol.png' %}" alt="A polêmica PEC da escala 6x1 foi oficialmente para a Câmara">
+                    <div class="noticia-texto">
+                        <p class="titulo">A polêmica PEC da escala 6x1 foi oficialmente para a Câmara</p>
+                        <p class="data">14/11/2024</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Botão "Ver Mais" -->
+        <button id="ver-mais" class="ver-mais" style= "background-color: #DD9B06;">Ver Mais</button>
+    </main>
+
+     <!-- JavaScript para "Ver Mais" -->
+     <script>
+        function toggleDropdown() {
+            const dropdown = document.getElementById("dropdown-options");
+            dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+        }
+    
+        // Fecha o dropdown se clicar fora
+        window.onclick = function (event) {
+            const dropdown = document.getElementById("dropdown-options");
+            if (!event.target.closest(".filter-button") && !event.target.closest(".dropdown-content")) {
+                dropdown.style.display = "none";
+            }
+        };
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const verMaisBtn = document.getElementById("ver-mais");
+            const conteudoAdicional = document.getElementById("conteudo-adicional");
+    
+            if (verMaisBtn && conteudoAdicional) {
+                verMaisBtn.addEventListener("click", function () {
+                    if (conteudoAdicional.style.display === "none") {
+                        conteudoAdicional.style.display = "block"; // Mostra o conteúdo adicional
+                        verMaisBtn.textContent = "Ver Menos"; // Altera o texto do botão
+                    } else {
+                        conteudoAdicional.style.display = "none"; // Esconde o conteúdo adicional
+                        verMaisBtn.textContent = "Ver Mais"; // Volta para "Ver Mais"
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
