@@ -1,0 +1,100 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Economation - Notícias</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <div class="header">
+            <div class="logo-container">
+                <img src="{% static 'images/logo.png' %}" alt="Logo Economation" class="logo">
+                <h1>Economation</h1>
+            </div>
+            <nav>
+                <a href="#">Início</a>
+                <a href="{% url 'noticias' %}" class="active">Notícias</a>
+                <a href="{% url 'artigos' %}">Artigos</a>
+                <a href="#">Jogos</a>
+            </nav>
+          <div class="user-circle"></div>
+        </div>
+    </header>
+
+    <!-- Conteúdo principal -->
+    <main>
+      <div class="actions">
+          <!-- Botão Filtros com Ícone -->
+          <button class="filter-button">
+              <img src="{% static 'images/filter.png' %}" alt="Ícone Filtros">
+              Filtros
+          </button>
+
+          <!-- Campo de busca e botão -->
+          <input type="text" placeholder="Buscar">
+          <button class="search-button">Buscar</button>
+      </div>
+
+            <!-- Grid de imagens principais -->
+            <div class="grid">
+                <!-- Imagem maior à esquerda -->
+                <div class="item grande">
+                    <a href="https://thenews.waffle.com.br/tecnologia/eua-determinam-que-tsmc-pare-de-exportar-chips-para-a-china?utm_source=the_news&utm_medium=newsletter&utm_campaign=11-11-2024" target="_blank">
+                        <img src="{% static 'images/tsmc.png' %}" alt="EUA determinam que TSMC pare de exportar chips para a China">
+                    </a>
+                </div>
+
+                <!-- Imagens menores à direita -->
+                <div class="item pequeno1">
+                    <a href="https://thenews.waffle.com.br/economia/bitcoin-bate-us-80k-dividendos-petrobras-e-mais?utm_source=the_news&utm_medium=newsletter&utm_campaign=11-11-2024" target="_blank">
+                        <img src="{% static 'images/bitcoin.png' %}" alt="Bitcoin bate US$ 80K">
+                    </a>
+                </div>
+                <div class="item pequeno2">
+                    <a href="https://thenews.waffle.com.br/negocios/chatgpt-fez-a-licao-de-casa-das-empresas-de-estudo-online?utm_source=the_news&utm_medium=newsletter&utm_campaign=12-11-2024" target="_blank">
+                        <img src="{% static 'images/chat.png' %}" alt="ChatGPT fez a lição de casa">
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lista de notícias -->
+        <section class="noticias-lista">
+            <div class="noticia">
+                <a href="https://thenews.waffle.com.br/tecnologia/eua-determinam-que-tsmc-pare-de-exportar-chips-para-a-china?utm_source=the_news&utm_medium=newsletter&utm_campaign=11-11-2024" target="_blank">
+                    <img src="{% static 'images/tsmc.png' %}" alt="EUA determinam que TSMC pare de exportar chips para a China">
+                    <div class="noticia-texto">
+                        <p class="titulo">EUA determinam que TSMC pare de exportar chips para a China</p>
+                        <p class="data">11/11/2024</p>
+                    </div>
+                </a>
+            </div>
+            <hr>
+            <div class="noticia">
+                <a href="https://thenews.waffle.com.br/economia/bitcoin-bate-us-80k-dividendos-petrobras-e-mais?utm_source=the_news&utm_medium=newsletter&utm_campaign=11-11-2024" target="_blank">
+                    <img src="{% static 'images/bitcoin.png' %}" alt="Bitcoin bate US$ 80K">
+                    <div class="noticia-texto">
+                        <p class="titulo">Bitcoin bate US$ 80K, dividendos Petrobras e mais</p>
+                        <p class="data">11/11/2024</p>
+                    </div>
+                </a>
+            </div>
+            <hr>
+            <div class="noticia">
+                <a href="https://thenews.waffle.com.br/negocios/chatgpt-fez-a-licao-de-casa-das-empresas-de-estudo-online?utm_source=the_news&utm_medium=newsletter&utm_campaign=12-11-2024" target="_blank">
+                    <img src="{% static 'images/chat.png' %}" alt="ChatGPT fez a lição de casa">
+                    <div class="noticia-texto">
+                        <p class="titulo">ChatGPT fez a lição de casa das empresas de estudo online?</p>
+                        <p class="data">12/11/2024</p>
+                    </div>
+                </a>
+            </div>
+            <button class="ver-mais">Veja Mais</button>
+        </section>
+    </main>
+</body>
+</html>
