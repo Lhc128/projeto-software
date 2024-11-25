@@ -13,7 +13,6 @@
         <div class="header">
             <div class="logo-container">
                 <img src="{% static 'images/logo.png' %}" alt="Logo Economation" class="logo">
-    
                 <h1>Economation</h1>
             </div>
             <nav>
@@ -26,19 +25,26 @@
         </div>
     </header>
     
-    <section class="fale-suporte">
-        <div class="contact-form-container">
-            <div class="contact-form-box">
-                <h2>FALE COM NOSSO SUPORTE</h2>
-                <form action="/enviar-mensagem" method="POST">
-                    <input type="text" name="nome" placeholder="Seu nome" required>
-                    <input type="email" name="email" placeholder="Seu e-mail" required>
-                    <input type="tel" name="telefone" placeholder="Seu telefone (opcional)">
-                    <textarea name="mensagem" rows="5" placeholder="Sua mensagem" required></textarea>
-                    <button type="submit">Enviar</button>
-                </form>
-            </div>
+    <div class="fale-suporte">
+        <h2>FALE COM NOSSO SUPORTE</h2>
+        <div class="input-box">
+            <input type="text" placeholder="Nome" class="contact-form-input">
         </div>
-    </section>
+        <div class="input-box">
+            <input type="email" placeholder="E-mail" class="contact-form-input">
+        </div>
+        <div class="input-box">
+            <input type="email" placeholder="Telefone" class="contact-form-input">
+        </div>
+        <div class="input-box">
+            <textarea placeholder="Mensagem" class="contact-form-textarea"></textarea>
+        </div>
+        <button type="submit">Enviar</button>
+    </div> 
+
+    <div class="logo-cortada">
+        <img src="{% static 'images/logo_cortada.png' %}" alt="Logo Cortada" class="logo">
+    </div>
+
 </body>
 </html>

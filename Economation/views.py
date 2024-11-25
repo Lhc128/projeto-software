@@ -5,3 +5,6 @@ def noticias(request):
 
 def artigos(request):
     return render(request, 'artigos.html')  
+
+def suporte(request):
+    return render(request, 'suporte.html')
