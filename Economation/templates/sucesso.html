@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sucesso</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <div class="header">
+            <div class="logo-container">
+                <img src="{% static 'images/logo.png' %}" alt="Logo Economation" class="logo">
+                <h1>Economation</h1>
+            </div>
+            <nav>
+                <a href="#">Início</a>
+                <a href="{% url 'noticias' %}" class="active">Notícias</a>
+                <a href="{% url 'artigos' %}">Artigos</a>
+                <a href="#">Jogos</a>
+            </nav>
+            <div class="user-circle"></div>
+        </div>
+    </header>
+
+    <div class="sucesso-container">
+        <h2>Mensagem enviada com sucesso!</h2>
+        <p>Obrigado por entrar em contato. Nossa equipe de suporte irá responder em breve.</p>
+        <a href="{% url 'suporte' %}">Voltar ao formulário</a>
+    </div>
+
+    <div class="logo-cortada">
+        <img src="{% static 'images/logo_cortada.png' %}" alt="Logo Cortada" class="logo">
+    </div>
+
+</body>
+</html>

@@ -25,22 +25,35 @@
         </div>
     </header>
     
-    <div class="fale-suporte">
-        <h2>FALE COM NOSSO SUPORTE</h2>
-        <div class="input-box">
-            <input type="text" placeholder="Nome" class="contact-form-input">
+    <form method="POST" action="{% url 'suporte' %}">
+        {% csrf_token %}
+        <div class="fale-suporte">
+            <h2>FALE COM NOSSO SUPORTE</h2>
+            
+            <!-- Campo Nome -->
+            <div class="input-box">
+                <input type="text" name="nome" placeholder="Nome" class="contact-form-input" required>
+            </div>
+            
+            <!-- Campo E-mail -->
+            <div class="input-box">
+                <input type="email" name="email" placeholder="E-mail" class="contact-form-input" required>
+            </div>
+            
+            <!-- Campo Telefone -->
+            <div class="input-box">
+                <input type="text" name="telefone" placeholder="Telefone" class="contact-form-input" required>
+            </div>
+            
+            <!-- Campo Mensagem -->
+            <div class="input-box">
+                <textarea name="mensagem" placeholder="Mensagem" class="contact-form-textarea" required></textarea>
+            </div>
+            
+            <!-- Botão de Envio -->
+            <button type="submit">Enviar</button>
         </div>
-        <div class="input-box">
-            <input type="email" placeholder="E-mail" class="contact-form-input">
-        </div>
-        <div class="input-box">
-            <input type="email" placeholder="Telefone" class="contact-form-input">
-        </div>
-        <div class="input-box">
-            <textarea placeholder="Mensagem" class="contact-form-textarea"></textarea>
-        </div>
-        <button type="submit">Enviar</button>
-    </div> 
+    </form>    
 
     <div class="logo-cortada">
         <img src="{% static 'images/logo_cortada.png' %}" alt="Logo Cortada" class="logo">

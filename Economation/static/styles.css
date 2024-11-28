@@ -390,3 +390,38 @@ button:hover {
     margin: 0;
     padding: 0;
 }
+
+.sucesso-container {
+    text-align: center;
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%;  /* Limita a largura da caixa de mensagem */
+    max-width: 600px;  /* Limita a largura máxima */
+    margin: 20px auto;  /* Garante o centro da tela */
+}
+
+.sucesso-container h2 {
+    color: #4CAF50;
+    font-size: 2em;
+}
+
+.sucesso-container p {
+    font-size: 1.2em;
+    color: #333;
+}
+
+.sucesso-container a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.sucesso-container a:hover {
+    background-color: #0056b3;
+}
