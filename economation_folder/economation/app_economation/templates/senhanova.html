@@ -1,0 +1,64 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nova Senha</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <div class="login-cadastro-container">
+        <!-- Cabeçalho Economation -->
+        <div class="header-economation">Economation</div>
+
+        <!-- Seção de Login -->
+        <div class="login-section">
+            <h2>Crie sua nova senha</h2>
+            <p>Acesse sua conta agora mesmo</p>
+        </div>
+
+        <!-- Imagem decorativa central -->
+        <img src="{% static 'images/logo-cortada.png' %}" alt="Imagem decorativa" class="central-image">
+
+        <!-- Seção de Cadastro -->
+        <div class="cadastro-section">
+            <h2>Nova senha</h2>
+            <p>Escolha sua nova senha</p>
+            <form class="cadastro-form" id="novaSenhaForm">
+                <div class="form-group">
+                    <label for="senha"><i class="icon-password"></i></label>
+                    <input type="password" id="senha" placeholder="Senha" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirmarSenha"><i class="icon-password"></i></label>
+                    <input type="password" id="confirmarSenha" placeholder="Confirmar Senha" required>
+                </div>
+                <!-- Texto de erro para senhas incompatíveis -->
+                <p id="senhaErro" style="color: red; display: none; font-size: 14px;">Senha não compatível</p>
+                <button type="submit" id="criarButton" class="submit-button">CRIAR</button>
+            </form>
+        </div>
+    </div>
+    <script>
+        // Elementos
+        const senhaInput = document.getElementById('senha');
+        const confirmarSenhaInput = document.getElementById('confirmarSenha');
+        const criarButton = document.getElementById('criarButton');
+        const senhaErro = document.getElementById('senhaErro');
+        const form = document.getElementById('novaSenhaForm');
+
+        // Redireciona para a página de login ao submeter
+        form.addEventListener('submit', function (event) {
+            event.preventDefault(); // Evita envio padrão do formulário
+
+            if (senhaInput.value === confirmarSenhaInput.value && senhaInput.value.length > 0) {
+                senhaErro.style.display = 'none'; // Oculta o erro se as senhas forem iguais
+                window.location.href = "{% url 'login' %}"; // Redireciona para a página de login
+            } else {
+                senhaErro.style.display = 'block'; // Exibe o erro apenas ao clicar
+            }
+        });
+    </script>
+</body>
+</html>
