@@ -14,3 +14,15 @@ def noticiasTec(request):
 
 def noticiasFin(request):
     return render(request, 'noticiasFin.html')
+
+def cadastro(request):
+    return render(request, 'cadastro.html')
+
+def login(request):
+    return render(request, 'login.html')
+
+def esqueceusenha(request):
+    return render(request, 'esqueceusenha.html')
+
+def senhanova(request):
+    return render(request, 'senhanova.html')

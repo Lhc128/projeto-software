@@ -376,3 +376,265 @@ hr {
 .btn-buscar{
     margin-right: 20px;
 }
+
+
+/* Página de Login e Cadastro */
+.login-cadastro-container {
+    display: flex;
+    height: 100vh; /* Ocupa a altura total da tela */
+    background-color: #f5f5f5;
+    font-family: Montserrat, sans-serif;
+    position: relative; /* Necessário para posicionar a imagem central */
+}
+
+/* Cabeçalho Economation */
+.header-economation {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 16px; /* Tamanho pequeno */
+    font-weight: bold;
+    color: white;
+    z-index: 10;
+}
+
+/* Seção de Login */
+.login-section {
+    flex: 0.7; /* Parte azul menor */
+    background-color: #142337; /* Azul escuro */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; /* Texto alinhado à esquerda */
+    padding: 40px;
+    position: relative;
+}
+
+.login-section h2 {
+    font-size: 36px; /* Aumenta o título */
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.login-section p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.login-section .login-button {
+    text-decoration: none;
+    background-color: #FFD700; /* Amarelo */
+    color: #142337;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 50px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login-section .login-button:hover {
+    background-color: #FFC700;
+}
+
+/* Seção de Cadastro */
+.cadastro-section {
+    flex: 1.2; /* Parte branca maior */
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centraliza o conteúdo */
+    align-items: center;
+    position: relative;
+    padding: 20px; /* Reduz padding geral */
+}
+
+/* Imagem decorativa */
+.central-image {
+    position: absolute;
+    width: 250px; /* Ajuste o tamanho da largura */
+    height: 600px; /* Mantém a proporção */
+    top: 50%; /* Centraliza verticalmente */
+    left: 43%; /* Centraliza horizontalmente */
+    transform: translate(-50%, -50%); /* Ajuste para centralizar exatamente */
+    z-index: 5; /* Garante que a imagem esteja visível acima do conteúdo */
+}
+
+/* Texto da seção de cadastro */
+.cadastro-section h2 {
+    font-size: 36px; /* Aumenta o título */
+    margin-bottom: 10px;
+    color: #142337;
+    font-weight: bold;
+    text-align: center;
+}
+
+.cadastro-section p {
+    font-size: 16px;
+    margin-bottom: 30px;
+    color: #555;
+    text-align: center;
+}
+
+/* Formulário de cadastro */
+.cadastro-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center; /* Centraliza os campos */
+    width: 100%; /* Ocupa toda a largura */
+}
+
+.cadastro-form .form-group {
+    display: flex;
+    align-items: center;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 100%;
+    max-width: 400px; /* Limita o tamanho das caixas */
+}
+
+.cadastro-form .form-group input {
+    border: none;
+    outline: none;
+    background: none;
+    width: 100%;
+    font-size: 14px;
+    margin: 0; /* Remove margens adicionais */
+    padding: 0; /* Remove padding adicional */
+    box-sizing: border-box;
+}
+
+.cadastro-form .form-group label {
+    margin-right: 10px;
+    color: #777;
+}
+
+.cadastro-form .submit-button {
+    text-decoration: none;
+    background-color: #FFD700;
+    color: #142337;
+    border: none;
+    text-align: center;
+    border-radius: 10px;
+    padding: 10px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+    max-width: 300px; /* Mesma largura das caixas de input */
+}
+
+.cadastro-form .submit-button:hover {
+    background-color: #FFC700;
+}
+
+/* Estilo Responsivo */
+@media (max-width: 768px) {
+    .login-cadastro-container {
+        flex-direction: column;
+    }
+
+    .login-section, .cadastro-section {
+        flex: none;
+        width: 100%;
+        height: auto;
+        padding: 20px;
+    }
+
+    .header-economation {
+        left: 10px;
+        top: 10px;
+        font-size: 14px;
+    }
+
+    .central-image {
+        width: 150px; /* Reduz tamanho para telas menores */
+    }
+}
+
+
+.forgot-password-link {
+    font-size: 14px;
+    color: #555;
+    text-decoration: none;
+    margin: 5px 0 10px;
+    display: inline-block;
+    text-align: left;
+    width: 100%;
+    padding-left: 260px;
+}
+
+.forgot-password-link:hover {
+    color: #142337;
+    text-decoration: underline;
+}
+
+.signup-link {
+    font-size: 14px;
+    color: #555;
+    margin-top: 15px;
+    text-align: center;
+}
+
+.signup-link a {
+    color: #142337;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
+}
+
+
+/* Bloco para o código de verificação */
+.code-verification {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.code-input {
+    width: 50px; /* Tamanho do bloco */
+    height: 50px; /* Altura do bloco */
+    font-size: 24px; /* Fonte maior para melhor visualização */
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f4f4f4;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.code-input:focus {
+    border-color: #FFD700; /* Cor ao focar no bloco */
+    background-color: #fff;
+}
+
+/* Ajuste do botão */
+.submit-button {
+    background-color: #FFD700;
+    color: #142337;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 50px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-align: center;
+}
+
+.submit-button:hover {
+    background-color: #FFC700;
+}
+
+

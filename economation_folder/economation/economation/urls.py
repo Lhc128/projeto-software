@@ -25,5 +25,10 @@ urlpatterns = [
     path('noticiasTec/', views.noticiasTec, name='noticiasTec'),
     path('noticiasFin/', views.noticiasFin, name='noticiasFin'),
     path('admin/', admin.site.urls),
+    path('cadastro/', views.cadastro, name='cadastro'),
+    path('login/', views.login, name='login'),
+    path('esqueceusenha/', views.esqueceusenha, name='esqueceusenha'),
+    path('senhanova/', views.senhanova, name='senhanova'),
+
 ]
 
