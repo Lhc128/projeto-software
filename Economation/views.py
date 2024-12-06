@@ -31,3 +31,12 @@ def artigos(request):
 
 def sucesso_view(request):
     return render(request, 'sucesso.html')
+
+def sucesso_view(request):
+    return render(request, 'sucesso.html')
+
+def inicio(request):
+    return render(request, 'inicial.html')
+
+def home(request):
+    return render(request,'home.html')
