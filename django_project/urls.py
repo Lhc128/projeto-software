@@ -1,6 +1,6 @@
 
 from django.urls import path
-from economation import views
+from Economation import views
 from django.contrib import admin
 
 urlpatterns = [
