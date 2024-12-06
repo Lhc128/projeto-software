@@ -1,0 +1,85 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Fale com nosso Suporte</title>
+        <link rel="stylesheet" href="{% static 'styles.css' %}">
+    </head>
+<body>
+    <!-- Cabeçalho -->
+    <header class="header">
+        <div class="logo-container">
+            <h1>Economation</h1>
+            <nav>
+                <a href="#">Início</a>
+                <a href="#">Notícias</a>
+                <a href="#">Artigos</a>
+                <a href="#">Jogos</a>
+                <a href="/">
+                    <img src="{% static 'images/logo.png' %}" alt="Logo Economation" class="logo">
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Página de Perfil -->
+    <main class="profile-page">
+        <div class="profile-header">
+            <div class="profile-avatar">
+                <img src="/static/images/avatar-placeholder.png" alt="Avatar do Usuário">
+            </div>
+            <div class="profile-info">
+                <h2>Usuário</h2>
+                <p>@usuario</p>
+                <p>Por aqui desde: <span>01/01/2023</span></p>
+                <button class="btn-edit">Editar perfil</button>
+            </div>
+        </div>
+
+        <!-- Visão Geral -->
+        <section class="overview">
+            <h3>Visão Geral</h3>
+            <div class="overview-cards">
+                <div class="card">
+                    <p>10</p>
+                    <span>Dias Seguidos</span>
+                </div>
+                <div class="card">
+                    <p>2505</p>
+                    <span>Total de XP</span>
+                </div>
+                <div class="card">
+                    <p>Prata</p>
+                    <span>Divisão</span>
+                </div>
+                <div class="card">
+                    <p>3</p>
+                    <span>Prêmios</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Conquistas -->
+        <section class="achievements">
+            <h3>Conquistas</h3>
+            <div class="achievement-cards">
+                <div class="achievement">+1000 Leituras</div>
+                <div class="achievement">+150 Artigos</div>
+                <div class="achievement">+500 Jogados</div>
+            </div>
+        </section>
+
+        <!-- Botão de Sair -->
+        <div class="logout">
+            <button class="btn-logout">Sair da Conta</button>
+        </div>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <p>© Economation 2024</p>
+    </footer>
+</body>
+</html>

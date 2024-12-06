@@ -31,3 +31,6 @@ def artigos(request):
 
 def sucesso_view(request):
     return render(request, 'sucesso.html')
+
+def perfil(request):
+    return render(request, 'perfil.html')
