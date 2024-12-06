@@ -3,7 +3,7 @@ from django.urls import path
 from Economation import views  
 
 urlpatterns = [
-    path('home/', views.home, name='home'),
+    path('', views.home, name='home'),
     path('noticias', views.noticias, name='noticias'),  
     path('artigos/', views.artigos, name='artigos'),
     path('admin/', admin.site.urls),  
