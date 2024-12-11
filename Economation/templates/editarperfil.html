@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil</title>
+    <link rel="stylesheet" href="{% static 'stylesp.css' %}">
+</head>
+<body2>
+    <div class="perfil-page-container">
+        <!-- Ícone de voltar -->
+        <div class="perfil-back-arrow">&larr;</div>
+        
+        <!-- Cabeçalho -->
+        <h1 class="perfil-header-title">PERFIL</h1>
+        
+        <!-- Seção de foto -->
+        <div class="perfil-foto-container">
+            <div class="perfil-foto-placeholder">
+                <div class="perfil-plus-icon">+</div>
+            </div>
+            <p class="perfil-mudar-foto-texto">MUDAR FOTO</p>
+        </div>
+        
+        <!-- Formulário -->
+        <form class="perfil-formulario">
+            <label for="perfil-nome">NOME</label>
+            <input type="text" id="perfil-nome" name="nome" placeholder="Nome">
+            
+            <label for="perfil-usuario">USUÁRIO</label>
+            <input type="text" id="perfil-usuario" name="usuario" placeholder="Usuário">
+            
+            <label for="perfil-senha">SENHA</label>
+            <input type="password" id="perfil-senha" name="senha" placeholder="Senha">
+            
+            <label for="perfil-email">EMAIL</label>
+            <input type="email" id="perfil-email" name="email" placeholder="Email">
+            
+            <button type="submit" class="perfil-salvar-button">SALVAR</button>
+        </form>
+    </div>
+</body2>
+</html>

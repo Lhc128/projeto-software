@@ -1,0 +1,80 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <div class="login-cadastro-container">
+        <!-- Cabeçalho Economation -->
+        <div class="header-economation">Economation</div>
+
+        <!-- Seção de Login -->
+        <div class="login-section">
+            <h2>Bem vindo de volta!</h2>
+            <p>Acesse sua conta agora mesmo</p>
+        </div>
+
+        <!-- Imagem decorativa central -->
+        <img src="{% static 'images/logo-cortada.png' %}" alt="Imagem decorativa" class="central-image">
+
+        <!-- Seção de Acesso -->
+        <div class="cadastro-section">
+            <h2>Acesse sua conta</h2>
+            <p>Preencha os campos com seus dados</p>
+            <form class="cadastro-form" id="loginForm">
+                <div class="form-group">
+                    <label for="email"><i class="icon-email"></i></label>
+                    <input type="email" id="email" placeholder="Email" required>
+                </div>
+                <div class="form-group">
+                    <label for="senha"><i class="icon-password"></i></label>
+                    <input type="password" id="senha" placeholder="Senha" required>
+                </div>
+                <div class="form-links">
+                    <a href="{% url 'esqueceusenha' %}" class="forgot-password-link">Esqueceu sua senha?</a>
+                </div>
+                <button type="submit" class="submit-button" id="entrarButton" disabled>ENTRAR</button>
+            </form>
+            <p class="signup-link">
+                Ainda não possui conta? <a href="{% url 'cadastro' %}">Cadastre-se</a>
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // Obtém os elementos
+        const emailInput = document.getElementById('email');
+        const senhaInput = document.getElementById('senha');
+        const entrarButton = document.getElementById('entrarButton');
+
+        // Função para validar os campos
+        function validarCampos() {
+            const email = emailInput.value.trim();
+            const senha = senhaInput.value.trim();
+
+            // Verifica se o email contém '@' e a senha não está vazia
+            if (email.includes('@') && senha !== '') {
+                entrarButton.disabled = false; // Habilita o botão
+            } else {
+                entrarButton.disabled = true; // Desabilita o botão
+            }
+        }
+
+        // Eventos para validar os campos em tempo real
+        emailInput.addEventListener('input', validarCampos);
+        senhaInput.addEventListener('input', validarCampos);
+
+        // Redireciona após validação
+        document.getElementById('loginForm').addEventListener('submit', function (event) {
+            event.preventDefault(); // Previne o envio do formulário
+            if (!entrarButton.disabled) {
+                window.location.href = "{% url 'cadastro' %}"; // Redireciona para a página principal
+            }
+        });
+    </script>
+</body>
+</html>

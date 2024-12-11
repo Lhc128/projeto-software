@@ -1,0 +1,94 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perfil do Usuário</title>
+  <link rel="stylesheet" href="{% static 'stylesp.css' %}">
+</head>
+<body>
+  <header>
+    <h1>Economation</h1>
+    <nav>
+      <a href="#" class="hover-link">Início</a>
+      <a href="#" class="hover-link">Notícias</a>
+      <a href="#" class="hover-link">Artigos</a>
+      <a href="#" class="hover-link">Jogos</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="profile">
+      <div class="profile-picture">
+        <div class="picture-placeholder">+</div>
+      </div>
+      <div class="profile-info">
+        <h2>Usuário</h2>
+        <p>@usuario</p>
+        <p>Por aqui desde [data]</p>
+        <a href="" class="btn">Editar perfil</a>
+      </div>
+    </section>
+
+    <section class="overview">
+      <h3>Visão Geral</h3>
+      <div class="overview-cards">
+        <div class="card">
+          <span>🔥</span>
+          <div>
+            <p>10</p>
+            <p>Dias seguidos</p>
+          </div>
+        </div>
+        <div class="card">
+          <span>⚡</span>
+          <div>
+            <p>2505</p>
+            <p>Total de XP</p>
+          </div>
+        </div>
+        <div class="card">
+          <span>🛡️</span>
+          <div>
+            <p>Prata</p>
+            <p>Divisão</p>
+          </div>
+        </div>
+        <div class="card">
+          <span>🏅</span>
+          <div>
+            <p>3</p>
+            <p>Pódios</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="achievements">
+      <h3>Conquistas</h3>
+      <div class="achievement-box">
+        <div class="conquistas">
+          <div class="item">
+            <span class="texto">+1000 leituras</span>
+          </div>
+          <div class="barra"></div>
+          <div class="item">
+            <span class="texto">+150 artigos</span>
+          </div>
+          <div class="barra"></div>
+          <div class="item">
+            <span class="texto">+500 jogados</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    </section>
+  </main>
+
+  <footer>
+    <a href="{% url 'cadastro' %}" class="logout-btn">SAIR DA CONTA</a>
+  </footer>
+</body>
+</html>

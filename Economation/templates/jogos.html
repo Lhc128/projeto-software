@@ -1,0 +1,72 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Economation</title>
+      <link rel="stylesheet" href="{% static 'stylesj.css' %}">
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo-container">
+                <img src="{% static 'images/logo.png' %}" alt="Logo da Economation" class="logo">
+                <h1 class="header-title">Economation</h1>
+
+            </div>
+            <div class="user-circle"></div>
+            </div>
+            <nav class="nav-links">
+                <a href="#artigos">Início</a>
+                <a href="#noticias">Notícias</a>
+                <a href="#eventos">Artigos</a>
+                <a href="#contato">Jogos</a>
+            </nav>
+        </div>
+        <div class="circle"></div>
+    </header>
+
+
+    <section class="podio">
+      
+      <img src="{% static 'images/logo_podium.png' %}" alt="Ranking"> <!-- Imagem do ranking -->
+
+      <div class="ranking">
+          <h2>Ranking Completo</h2>
+          <div class="ranking-item">300 XP -- Maria Antonia</div>
+          <div class="ranking-item">280 XP -- Lucas Cuan</div>
+          <div class="ranking-item">240 XP -- Maria Eduarda</div>
+          <div class="ranking-item">180 XP -- Ana Laura</div>
+          <div class="ranking-item">140 XP -- Rodrigo Ayres</div>
+          <div class="ranking-item">120 XP -- João Gralha</div>
+
+      </div>
+
+      <div class="quiz">
+          <h2>Quiz da Semana</h2>
+          <hr>
+          <div class="caixa">
+              <div class="quiz-item">
+                <a href="jogofin.html">
+                  <img src="{% static 'images/amarelo.png' %}" alt="Finanças">
+                  <span>Finanças</span>
+                </a>
+              </div>
+              <div class="quiz-item">
+                <a href="jogoinov.html">
+                  <img src="{% static 'images/roxo.png' %}" alt="Inovação">
+                  <span>Inovação</span>
+                  </a>
+              </div>
+              <div class="quiz-item" >
+                <a href="jogotec.html">
+                  <img src="{% static 'images/azul.png' %}" alt="Tecnologia">
+                  <span>Tecnologia</span>
+                  </a>
+              </div>
+          </div>
+      </div>
+  </body>
+  </html>

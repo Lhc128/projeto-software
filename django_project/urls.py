@@ -9,5 +9,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),  
     path('suporte/', views.suporte, name='suporte'),
     path('sucesso/', views.sucesso_view, name='sucesso'),
-    path('inicio/', views.inicio, name='inicio')
+    path('inicio/', views.inicio, name='inicio'),
+    path('jogos/', views.jogos, name='jogos'),
+    path('perfil/', views.perfil, name='perfil'),
+    path('editar-perfil/', views.editarperfil, name='editar-perfil')
 ]
