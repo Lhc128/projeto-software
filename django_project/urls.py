@@ -12,5 +12,12 @@ urlpatterns = [
     path('inicio/', views.inicio, name='inicio'),
     path('jogos/', views.jogos, name='jogos'),
     path('perfil/', views.perfil, name='perfil'),
-    path('editar-perfil/', views.editarperfil, name='editar-perfil')
+    path('editar-perfil/', views.editarperfil, name='editar-perfil'),
+    path('cadastro/', views.cadastro, name='cadastro'),
+    path('jogotec/', views.jogoTec, name='jogotec'),
+    path('jogoinov/', views.jogoInov, name='jogoinov'),
+    path('jogofin/', views.jogoFin, name='jogofin'),
+    path('noticiatec/', views.NotTecnologia, name='noticiatec'),
+    path('noticiafin/', views.NotFinancas, name='noticiafin'),
+    path('noticiainov/', views.NotInovacao, name='noticiainov')
 ]

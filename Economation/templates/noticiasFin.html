@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Notícias - Finanças</title>
-    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <link rel="stylesheet" href="{% static 'styles4.css' %}">
 </head>
 <body>
     <!-- Cabeçalho -->
@@ -34,13 +34,13 @@
                 <img src="{% static 'images/filter.png' %}" alt="Ícone Filtros"> Filtros 
             </button>
             <div id="dropdown-options" class="dropdown-content">
-                <a href="{% url 'noticiasInov' %}">
+                <a href="{% url 'noticiainov' %}">
                     <img src="{% static 'images/inovacao.png' %}" alt="Inovação" class="filter-image">
                 </a>
-                <a href="{% url 'noticiasTec' %}">
+                <a href="{% url 'noticiatec' %}">
                     <img src="{% static 'images/tecnologia.png' %}" alt="Tecnologia" class="filter-image">
                 </a>
-                <a href="{% url 'noticiasFin' %}">
+                <a href="{% url 'noticiafin' %}">
                     <img src="{% static 'images/financas.png' %}" alt="Finanças" class="filter-image">
                 </a>
             </div>

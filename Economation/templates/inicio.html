@@ -19,10 +19,10 @@
             <div class="user-circle"></div>
             </div>
             <nav class="nav-links">
-                <a href="#artigos">Início</a>
-                <a href="#noticias">Notícias</a>
-                <a href="#eventos">Artigos</a>
-                <a href="#contato">Jogos</a>
+                <a href="{% url 'inicio' %}">Início</a>
+                <a href="{% url 'noticias' %}">Notícias</a>
+                <a href="{% url 'artigos' %}">Artigos</a>
+                <a href="{% url 'jogos' %}">Jogos</a>
             </nav>
         </div>
         <div class="circle"></div>
@@ -38,15 +38,15 @@
 
             <!-- Caixas de temas com imagens e links -->
             <div class="temas-container">
-                <a href="financas.html" class="tema">
+                <a href="{% url 'noticiafin' %}" class="tema">
                     <img src="{% static 'images/amarelo.png' %}" alt="Ícone de Finanças">
                     <span>Finanças</span>
                 </a>
-                <a href="inovacao.html" class="tema">
+                <a href="{% url 'noticiainov' %}" class="tema">
                     <img src="{% static 'images/roxo.png' %}" alt="Ícone de Inovação">
                     <span>Inovação</span>
                 </a>
-                <a href="tecnologia.html" class="tema">
+                <a href="{% url 'noticiatec' %}" class="tema">
                     <img src="{% static 'images/azul.png' %}" alt="Ícone de Tecnologia">
                     <span>Tecnologia</span>
                 </a>
