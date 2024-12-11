@@ -1,0 +1,226 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'stylesjf.css' %}">
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz da Semana | Finanças</title>
+  <link rel="stylesheet" href="{% static 'stylesjf.css' %}">
+</head>
+<body>
+  <div class="quiz-container">
+    <header>
+      <h1>Quiz da Semana | Finanças</h1>
+    </header>
+    <main id="quiz-content">
+      <!-- Todas as perguntas serão geradas dinamicamente aqui -->
+    </main>
+    <footer>
+      <button id="submit-button" class="submit-button" onclick="showResults()">FINALIZAR</button>
+      <p id="score-display" class="score"></p>
+      <button id="reset-button" class="submit-button" style="display: none;" onclick="resetQuiz()">VOLTAR</button>
+    </footer>
+  </div>
+
+  <script>
+    const questions = [
+      {
+        question: "O que é a Taxa Selic?",
+        options: [
+          "A porcentagem de imposto cobrada em compras internacionais.",
+          "A taxa básica de juros da economia brasileira.",
+          "A taxa aplicada em financiamentos imobiliários."
+        ],
+        correct: 1,
+        justification: "A Taxa Selic é a principal referência para os juros cobrados em empréstimos e financiamentos no Brasil, definida pelo Banco Central."
+      },
+      {
+        question: "O que significa PIB?",
+        options: [
+          "Produto Interno Bruto.",
+          "Plano de Investimento Bancário.",
+          "Programa de Incentivo ao Bolsa Família."
+        ],
+        correct: 0,
+        justification: "O PIB mede a soma de todos os bens e serviços finais produzidos em um país dentro de determinado período."
+      },
+      {
+        question: "O que é inflação?",
+        options: [
+          "O aumento do valor do dólar em relação ao real.",
+          "A redução no poder de compra devido ao aumento geral dos preços.",
+          "Um tipo de investimento de renda fixa."
+        ],
+        correct: 1,
+        justification: "Inflação representa a alta contínua e generalizada dos preços, afetando o custo de vida."
+      },
+      {
+        question: "O que é um fundo de investimento?",
+        options: [
+          "Uma conta poupança com alto rendimento.",
+          "Um grupo de investidores que aplica dinheiro em ativos financeiros.",
+          "Um empréstimo entre pessoas físicas."
+        ],
+        correct: 1,
+        justification: "Um fundo reúne recursos de vários investidores para aplicar em diferentes tipos de ativos, como ações e títulos."
+      },
+      {
+        question: "Qual é o principal objetivo da reserva de emergência?",
+        options: [
+          "Garantir segurança financeira em situações imprevistas.",
+          "Pagar impostos com desconto.",
+          "Investir em ações de alto risco."
+        ],
+        correct: 0,
+        justification: "A reserva de emergência serve para cobrir despesas inesperadas, como desemprego ou emergências médicas."
+      },
+      {
+        question: "O que significa Renda Fixa?",
+        options: [
+          "Investimentos que garantem retorno variável.",
+          "Investimentos que oferecem retorno previsível.",
+          "Dinheiro guardado em casa."
+        ],
+        correct: 1,
+        justification: "Na renda fixa, as condições de rentabilidade são determinadas no momento do investimento."
+      },
+      {
+        question: "O que é o CDI?",
+        options: [
+          "Certificado de Depósito Interbancário, usado como referência para juros.",
+          "Cadastro de Dívidas Internas.",
+          "Comissão de Desenvolvimento Industrial."
+        ],
+        correct: 0,
+        justification: "O CDI é uma taxa usada como benchmark para investimentos de renda fixa no Brasil."
+      },
+      {
+        question: "O que é um CDB?",
+        options: [
+          "Certificado de Depósito Bancário, emitido por bancos para captar dinheiro.",
+          "Cadastro de Bancos Digitais.",
+          "Contador de Depósitos Bancários."
+        ],
+        correct: 0,
+        justification: "O CDB é um título emitido pelos bancos que remunera o investidor com base na taxa acordada."
+      },
+      {
+        question: "O que significa diversificar investimentos?",
+        options: [
+          "Colocar todo o dinheiro em um único ativo financeiro.",
+          "Distribuir o dinheiro em diferentes tipos de ativos para reduzir riscos.",
+          "Transferir dinheiro para contas de outros países."
+        ],
+        correct: 1,
+        justification: "Diversificação reduz a exposição a riscos específicos, mantendo o equilíbrio do portfólio."
+      },
+      {
+        question: "Qual a diferença entre ativo e passivo?",
+        options: [
+          "Ativos são bens e direitos, enquanto passivos são obrigações e dívidas.",
+          "Passivos são investimentos e ativos são dívidas.",
+          "Ambos significam a mesma coisa."
+        ],
+        correct: 0,
+        justification: "Ativos representam recursos econômicos, enquanto passivos são responsabilidades financeiras."
+      }
+    ];
+
+    let userAnswers = new Array(questions.length).fill(null);
+    let score = 0;
+
+    // Renderiza o quiz
+    function renderQuiz() {
+      const quizContent = document.getElementById("quiz-content");
+      quizContent.innerHTML = questions.map((q, index) => `
+        <section class="question">
+          <h2>Pergunta ${index + 1} - ${q.question} - 10 XP</h2>
+          <ul class="answers">
+            ${q.options.map((option, i) => `
+              <li onclick="selectAnswer(${index}, ${i}, this)">${option}</li>
+            `).join('')}
+          </ul>
+        </section>
+      `).join('');
+    }
+
+    // Marca a resposta selecionada pelo usuário
+    function selectAnswer(questionIndex, selectedOption, element) {
+      const options = element.parentNode.querySelectorAll('li');
+      options.forEach(option => {
+        option.style.backgroundColor = "#fdf5e6"; // Resetar cor
+        option.style.color = "black";
+      });
+
+      element.style.backgroundColor = "#FAD37A"; // Cor amarelo claro para seleção
+      element.style.color = "black";
+
+      userAnswers[questionIndex] = selectedOption;
+    }
+
+    // Exibe os resultados e justificativas
+    function showResults() {
+          // Verifica se todas as perguntas foram respondidas
+        const unanswered = userAnswers.some(answer => answer === null);
+        if (unanswered) {
+        alert("Por favor, responda todas as perguntas antes de finalizar.");
+        return; // Interrompe a execução da função
+        }
+        const quizContent = document.getElementById("quiz-content");
+        let resultHTML = "";
+
+        score = 0;
+
+        questions.forEach((q, index) => {
+            const userAnswer = userAnswers[index];
+            const isCorrect = userAnswer === q.correct;
+
+        if (isCorrect) {
+          score += 10;
+        }
+
+        resultHTML += `
+          <section class="question">
+            <h2>Pergunta ${index + 1} - ${q.question} - 10 XP</h2>
+            <ul class="answers">
+              ${q.options.map((option, i) => `
+                <li style="background-color: ${
+                  i === q.correct
+                    ? "#d4f9d4" // Verde para correta
+                    : i === userAnswer
+                    ? "#f9d4d4" // Vermelho para incorreta
+                    : "#fdf5e6"
+                }; color: black;">
+                  ${option}
+                </li>
+              `).join('')}
+            </ul>
+            <p class="justification">Resposta: ${q.justification}</p>
+          </section>
+        `;
+      });
+
+      quizContent.innerHTML = resultHTML;
+      document.getElementById("score-display").innerText = `Sua pontuação foi de ${score} XP!`;
+      document.getElementById("submit-button").style.display = "none";
+      document.getElementById("reset-button").style.display = "inline-block";
+
+      window.scrollTo(0, 0);
+    }
+
+    // Reseta o quiz
+    function resetQuiz() {
+      userAnswers.fill(null);
+      score = 0;
+      renderQuiz();
+      document.getElementById("score-display").innerText = "";
+      document.getElementById("submit-button").style.display = "inline-block";
+      document.getElementById("reset-button").style.display = "none";
+    }
+
+    // Inicializa o quiz
+    renderQuiz();
+  </script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Economation</title>
+    <link rel="stylesheet" href="{% static 'stylessn.css' %}" >
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo-container">
+                <img src="{% static 'images/logo.png' %}" alt="Logo da Economation" class="logo">
+                <h1 class="header-title">Economation</h1>
+                
+            </div>
+            <div class="user-circle"></div>
+            </div>
+            <nav class="nav-links">
+                <a href="#artigos">Início</a>
+                <a href="#noticias">Notícias</a>
+                <a href="#eventos">Artigos</a>
+                <a href="#contato">Jogos</a>
+            </nav>
+        </div>
+        <div class="circle"></div>
+    </header>
+
+   <!-- Nossos Valores -->
+   <section id="objetivos" class="values-section">
+    <h2 class="section-title">Nossos Valores</h2>
+    <div class="value-cards">
+        <div class="value-card">
+            <h3>Para quem?</h3>
+            <img src="{% static 'images/people-icon.png' %}" alt="Ícone Para Quem" class="value-icon2">
+            <p>Desenvolvido para aqueles que almejam aprender mais sobre finanças, tecnologia e inovação.</p>
+        </div>
+        <div class="value-card">
+            <h3>Objetivo</h3>
+            <img src="{% static 'images/rocket-icon.png' %}" alt="Ícone Objetivo" class="value-icon">
+            <p>Essa plataforma oferece uma oportunidade única de potencializar seus conhecimentos.</p>
+        </div>
+        <div class="value-card">
+            <h3>Experiência</h3>
+            <img src="{% static 'images/lock-icon.png' %}" alt="Ícone Experiência" class="value-icon">
+            <p>Você vai ter a chance de adentrar em uma das áreas mais almejadas dos dias de hoje.</p>
+        </div>
+    </div>
+</section>
+
+    <!-- Quem Somos -->
+    <section id="sobre-nos" class="about-us-section">
+        <h2 class="section-title">Quem Somos</h2>
+        <p class="section-description">Grupo de estudantes da universidade PUC-Rio que anseiam por sanar as dores da sociedade trazendo mudanças.</p>
+        <div class="team-grid">
+            <div class="team-member">
+                <img src="{% static 'images/analaura.png' %}" alt="Ana Laura Monte">
+                <p>Ana Laura Monte<br>4º período de Engenharia de Produção</p>
+            </div>
+            <div class="team-member">
+                <img src="{% static 'images/joaogralha.png' %}" alt="João Gralha">
+                <p>João Gralha<br>3º período de Engenharia da Computação</p>
+            </div>
+            <div class="team-member">
+                <img src="{% static 'images/lucascuan.png' %}" alt="Lucas Cuan">
+                <p>Lucas Cuan<br>2º período de Engenharia de Produção</p>
+            </div>
+            <div class="team-member">
+                <img src="{% static 'images/mariaantonia.png' %}" alt="Maria Antonia">
+                <p>Maria Antonia<br>2º período de Engenharia da Computação</p>
+            </div>
+            <div class="team-member">
+                <img src="{% static 'images/mariaeduarda.png' %}" alt="Maria Eduarda">
+                <p>Maria Eduarda<br>2º período de Engenharia de Produção</p>
+            </div>
+            <div class="team-member">
+                <img src="{% static 'images/rodrigoayres.png' %}" alt="Rodrigo Ayres">
+                <p>Rodrigo Ayres<br>2º período de Engenharia de Produção</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <!-- Logo e nome -->
+        <div class="logo-container">
+            <img src="{% static 'images/logo.png' %}" alt="Logo Economation">
+            <span>Economation</span>
+        </div>
+
+        <!-- Links centrais -->
+        <div class="links">
+            <a href="sobre.html">Sobre Nós</a>
+            <a href="suporte.html">Suporte</a>
+        </div>
+
+        <!-- Ícones sociais -->
+        <div class="social">
+            <a href="mailto:economation@gmail.com">
+                <img src="{% static 'images/email.png' %}" alt="Ícone de e-mail">
+                economation@gmail.com
+            </a>
+            <a href="https://instagram.com/economation" target="_blank">
+                <img src="{% static 'images/insta.png' %}" alt="Ícone do Instagram">
+                @economation
+            </a>
+        </div>
+    </footer>
+</body>
+</html>

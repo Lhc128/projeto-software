@@ -1,0 +1,124 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Economation - Início</title>
+    <link rel="stylesheet" href="{% static 'stylesinicio.css' %}">
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo-container">
+                <img src="{% static 'images/logo.png' %}" alt="Logo da Economation" class="logo">
+                <h1 class="header-title">Economation</h1>
+
+            </div>
+            <div class="user-circle"></div>
+            </div>
+            <nav class="nav-links">
+                <a href="#artigos">Início</a>
+                <a href="#noticias">Notícias</a>
+                <a href="#eventos">Artigos</a>
+                <a href="#contato">Jogos</a>
+            </nav>
+        </div>
+        <div class="circle"></div>
+    </header>
+
+    <!-- Seção de temas -->
+    <section class="temas-favoritos">
+        <div class="temas-wrapper">
+            <!-- Texto à esquerda -->
+            <div class="temas-texto">
+                <h2>Encontre seus temas favoritos!</h2>
+            </div>
+
+            <!-- Caixas de temas com imagens e links -->
+            <div class="temas-container">
+                <a href="financas.html" class="tema">
+                    <img src="{% static 'images/amarelo.png' %}" alt="Ícone de Finanças">
+                    <span>Finanças</span>
+                </a>
+                <a href="inovacao.html" class="tema">
+                    <img src="{% static 'images/roxo.png' %}" alt="Ícone de Inovação">
+                    <span>Inovação</span>
+                </a>
+                <a href="tecnologia.html" class="tema">
+                    <img src="{% static 'images/azul.png' %}" alt="Ícone de Tecnologia">
+                    <span>Tecnologia</span>
+                </a>
+            </div>
+
+            <!-- Imagem à direita -->
+            <div class="temas-imagem">
+                <img src="{% static 'images/logocortado.png' %}" alt="Imagem decorativa">
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção "Você sabe o que é?" -->
+    <section class="aprendizado">
+        <h2>Você sabe o que é?</h2>
+        <div class="cards-container">
+            <div class="card">
+                <a href="https://www.youtube.com/watch?v=U_6K2RUfNEc">
+                    <h3>Capitalização contínua</h3>
+                    <img src="{% static 'images/din.png' %}" alt="Din" class="value-icon">
+                    <p>Aprenda sobre um dos métodos de cobrança mais comuns no mercado financeiro!</p>
+                </a>
+            </div>
+            <div class="card">
+                <a href="https://www.youtube.com/watch?v=Z-iz6BqLw7M">
+                    <h3>Ativos e Passivos</h3>
+                    <img src="{% static 'images/subir.png' %}" alt="Subir" class="value-icon">
+                    <p>Aprenda sobre os termos fundamentais para análise financeira de uma empresa!</p>
+                </a>
+            </div>
+            <div class="card">
+                <a href="https://www.youtube.com/watch?v=TdGGYYm5SBo">
+                    <h3>Liquidez no Mercado</h3>
+                    <img src="{% static 'images/pilha.png' %}" alt="Pilha" class="value-icon">
+                    <p>Aprenda sobre liquidez e entenda como as empresas pagam suas dívidas a curto prazo!</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="podio">
+        <h2>Quer aprender mais?</h2>
+        <img src="{% static 'images/logo_podium.png' %}" alt="Ranking"> <!-- Imagem do ranking -->
+        <a href="link_podio.html" class="podio-button">Entre no Pódio</a> <!-- Botão com hiperlink -->
+    </section>
+
+
+<!-- Rodapé -->
+    <footer class="footer">
+        <!-- Logo e nome -->
+        <div class="logo-container">
+            <img src="{% static 'images/logo.png' %}" alt="Logo Economation">
+            <span>Economation</span>
+        </div>
+
+        <!-- Links centrais -->
+        <div class="links">
+            <a href="sobre.html">Sobre Nós</a>
+            <a href="suporte.html">Suporte</a>
+        </div>
+
+        <!-- Ícones sociais -->
+        <div class="social">
+            <a href="mailto:economation@gmail.com">
+                <img src="{% static 'images/email.png' %}" alt="Ícone de e-mail">
+                economation@gmail.com
+            </a>
+            <a href="https://instagram.com/economation" target="_blank">
+                <img src="{% static 'images/insta.png' %}" alt="Ícone do Instagram">
+                @economation
+            </a>
+        </div>
+    </footer>
+
+  

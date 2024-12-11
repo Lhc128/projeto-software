@@ -33,7 +33,7 @@ def sucesso_view(request):
     return render(request, 'sucesso.html')
 
 def inicio(request):
-    return render(request, 'inicial.html')
+    return render(request, 'inicio.html')
 
 def home(request):
     return render(request,'home.html')
@@ -46,3 +46,33 @@ def editarperfil(request):
 
 def perfil(request):
     return render(request,'perfil.html')
+
+def NotInovacao(request):
+    return render(request,'noticiasInov.html')
+
+def NotFinancas(request):
+    return render(request,'noticiasFin.html')
+
+def NotTecnologia(request):
+    return render(request,'noticiasTec.html')
+
+def esqueceuSenha(request):
+    return render(request,'esqueceusenha.html')
+
+def senhanova(request):
+    return render(request,'senhanova.html')
+
+def login(request):
+    return render(request,'login.html')
+
+def cadastro(request):
+    return render(request,'cadastro.html')
+
+def jogoFin(request):
+    return render(request, 'jogofin.html')
+
+def jogoInov(request):
+    return render(request, 'jogoinov.html')
+
+def jogoTec(request):
+    return render(request, 'jogotec.html')
