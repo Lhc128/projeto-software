@@ -19,9 +19,9 @@
                 <a href="#">Início</a>
                 <a href="{% url 'noticias' %}" class="active">Notícias</a>
                 <a href="{% url 'artigos' %}">Artigos</a>
-                <a href="#">Jogos</a>
+                <a href="{% url 'jogos' %}">Jogos</a>
             </nav>
-            <div class="user-circle"></div>
+            <a href="{% url 'perfil' %}"><div class="user-circle"></div></a>
         </div>
     </header>
 

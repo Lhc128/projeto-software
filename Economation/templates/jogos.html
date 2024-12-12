@@ -16,7 +16,7 @@
                 <h1 class="header-title">Economation</h1>
 
             </div>
-            <div class="user-circle"></div>
+            <a href="{% url 'perfil' %}"><div class="user-circle"></div></a>
             </div>
             <nav class="nav-links">
               <a href="{% url 'inicio' %}">Início</a>
@@ -44,7 +44,6 @@
       </div>
 
       <div class="quiz">
-<<<<<<< HEAD
           <h2>Quiz da Semana</h2>
           <hr>
           <div class="caixa">
@@ -67,31 +66,6 @@
                   </a>
               </div>
           </div>
-      </div>
-=======
-        <h2>Quiz da Semana</h2>
-        <hr>
-        <div class="caixa">
-            <div class="quiz-item">
-                <a href="{% url 'jogofin' %}">
-                    <img src="{% static 'images/amarelo.png' %}" alt="Finanças">
-                    <span>Finanças</span>
-                </a>
-            </div>
-            <div class="quiz-item">
-                <a href="{% url 'jogoinov' %}">
-                    <img src="{% static 'images/roxo.png' %}" alt="Inovação">
-                    <span>Inovação</span>
-                </a>
-            </div>
-            <div class="quiz-item">
-                <a href="{% url 'jogotec' %}">
-                    <img src="{% static 'images/azul.png' %}" alt="Tecnologia">
-                    <span>Tecnologia</span>
-                </a>
-            </div>
-        </div>
-    </div>        
->>>>>>> 8dd1c1b0f6b4e3851db817bfff7648801d062394
+      </div>    
   </body>
   </html>
