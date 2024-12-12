@@ -28,7 +28,6 @@
         <div class="circle"></div>
     </header>
 
-
     <section class="podio">
       
       <img src="{% static 'images/logo_podium.png' %}" alt="Ranking"> <!-- Imagem do ranking -->
@@ -49,19 +48,19 @@
           <hr>
           <div class="caixa">
               <div class="quiz-item">
-                <a href="jogofin.html">
+                <a href="{% url 'jogofin' %}">
                   <img src="{% static 'images/amarelo.png' %}" alt="Finanças">
                   <span>Finanças</span>
                 </a>
               </div>
               <div class="quiz-item">
-                <a href="{% url 'jogos' %}">
+                <a href="{% url 'jogoinov' %}">
                   <img src="{% static 'images/roxo.png' %}" alt="Inovação">
                   <span>Inovação</span>
                   </a>
               </div>
               <div class="quiz-item" >
-                <a href="jogotec.html">
+                <a href="{% url 'jogotec' %}">
                   <img src="{% static 'images/azul.png' %}" alt="Tecnologia">
                   <span>Tecnologia</span>
                   </a>

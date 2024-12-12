@@ -10,12 +10,12 @@
 <body>
   <header>
     <h1>Economation</h1>
-    <nav>
-      <a href="#" class="hover-link">Início</a>
-      <a href="#" class="hover-link">Notícias</a>
-      <a href="#" class="hover-link">Artigos</a>
-      <a href="#" class="hover-link">Jogos</a>
-    </nav>
+    <nav class="nav-links">
+      <a href="{% url 'inicio' %}">Início</a>
+      <a href="{% url 'noticias' %}">Notícias</a>
+      <a href="{% url 'artigos' %}">Artigos</a>
+      <a href="{% url 'jogos' %}">Jogos</a>
+  </nav>
   </header>
 
   <main>
@@ -24,10 +24,10 @@
         <div class="picture-placeholder">+</div>
       </div>
       <div class="profile-info">
-        <h2>Usuário</h2>
-        <p>@usuario</p>
-        <p>Por aqui desde [data]</p>
-        <a href="" class="btn">Editar perfil</a>
+        <h2>Lucas Cuan</h2>
+        <p>@lucashc8</p>
+        <p>Por aqui desde 05/12/2024</p>
+        <a href="{% url "editar-perfil"%}" class="btn">Editar perfil</a>
       </div>
     </section>
 
