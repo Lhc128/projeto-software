@@ -425,3 +425,60 @@ button:hover {
 .sucesso-container a:hover {
     background-color: #0056b3;
 }
+
+/* Dropdown Filtros */
+.dropdown {
+    position: relative;
+    display: flex;
+    width: 300px;
+    margin-left: 20px;
+}
+
+.filter-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: none;
+    border: none;
+    color: #001f3f;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none; /* Escondido inicialmente */
+    position: absolute;
+    background-color: white;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 10px 0;
+    border-radius: 5px;
+    z-index: 1;
+    width: 200px; /* Largura do dropdown */
+}
+
+.dropdown-content a {
+    display: block; /* Cada imagem ocupa uma linha */
+    text-align: center;
+    margin-bottom: 10px; /* Espaçamento entre as imagens */
+}
+
+.filter-image {
+    width: 100px; /* Tamanho reduzido */
+    margin: 0 auto;
+    transition: transform 0.3s;
+}
+
+.filter-image:hover {
+    transform: scale(1.1); /* Zoom ao passar o mouse */
+}
+
+.filtro-busca{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-block: 20px;
+}
+
+.btn-buscar{
+    margin-right: 20px;
+}
