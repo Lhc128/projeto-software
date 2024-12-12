@@ -15,11 +15,11 @@
                 <img src="{% static 'images/logo.png' %}" alt="Logo Economation" class="logo">
                 <h1>Economation</h1>
             </div>
-            <nav>
-                <a href="#">Início</a>
-                <a href="{% url 'noticias' %}" class="active">Notícias</a>
+            <nav class="nav-links">
+                <a href="{% url 'inicio' %}">Início</a>
+                <a href="{% url 'noticias' %}">Notícias</a>
                 <a href="{% url 'artigos' %}">Artigos</a>
-                <a href="#">Jogos</a>
+                <a href="{% url 'jogos' %}">Jogos</a>
             </nav>
             <div class="user-circle"></div>
         </div>

@@ -19,11 +19,11 @@
             <div class="user-circle"></div>
             </div>
             <nav class="nav-links">
-                <a href="#artigos">Início</a>
-                <a href="#noticias">Notícias</a>
-                <a href="#eventos">Artigos</a>
-                <a href="#contato">Jogos</a>
-            </nav>
+              <a href="{% url 'inicio' %}">Início</a>
+              <a href="{% url 'noticias' %}">Notícias</a>
+              <a href="{% url 'artigos' %}">Artigos</a>
+              <a href="{% url 'jogos' %}">Jogos</a>
+          </nav>
         </div>
         <div class="circle"></div>
     </header>
@@ -55,7 +55,7 @@
                 </a>
               </div>
               <div class="quiz-item">
-                <a href="jogoinov.html">
+                <a href="{% url jogo%}">
                   <img src="{% static 'images/roxo.png' %}" alt="Inovação">
                   <span>Inovação</span>
                   </a>

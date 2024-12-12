@@ -10,16 +10,16 @@
 <body>
     <!-- Cabeçalho -->
     <header>
-        <div class="header">
+        <div class="header" style="background-color: #001f3f;">
             <div class="logo-container">
                 <img src="{% static 'images/logo.png' %}" alt="Logo Economation" class="logo">
                 <h1>Economation</h1>
             </div>
-            <nav>
-                <a href="{% url 'inicio'%}">Início</a>
+            <nav class="nav-links">
+                <a href="{% url 'inicio' %}">Início</a>
                 <a href="{% url 'noticias' %}">Notícias</a>
-                <a href="{% url 'artigos' %}" class="active">Artigos</a>
-                <a href="{% url 'suporte' %}">Cadastro</a>
+                <a href="{% url 'artigos' %}">Artigos</a>
+                <a href="{% url 'jogos' %}">Jogos</a>
             </nav>
         </div>
     </header>
@@ -27,54 +27,70 @@
     <!-- Conteúdo principal -->
     <main>
         <div class="actions">
-            <!-- Botão Filtros com Ícone -->
-            <button class="filter-button">
-                <img src="{% static 'images/filter.png' %}" alt="Ícone Filtros">
-                Filtros
-            </button>
-
             <!-- Campo de busca e botão -->
             <input type="text" placeholder="Buscar">
             <button class="search-button">Buscar</button>
         </div>
 
-            <!-- Grid de Artigos -->
-            <div class="artigos-grid">
-                <a href="https://www.youtube.com/watch?v=z64HBkLIsMY" target="_blank" class="artigo-item">
-                    <img src="{% static 'images/bitcoin2.png' %}" alt="Bitcoin">
-                    <h3>BITCOIN</h3>
-                    <p>O que é, como surgiu?</p>
-                </a>
-                <a href="https://www.youtube.com/watch?app=desktop&v=qvcNoZqF4XI" target="_blank" class="artigo-item">
-                    <img src="{% static 'images/tributos.png' %}" alt="Tributos">
-                    <h3>TRIBUTOS</h3>
-                    <p>O que são e tipos?</p>
-                </a>
-                <a href="https://www.youtube.com/watch?v=0us8Oq7TeUg&t=251s" target="_blank" class="artigo-item">
-                    <img src="{% static 'images/inflacao.png' %}" alt="Inflação">
-                    <h3>INFLAÇÃO</h3>
-                    <p>Como surgiu?</p>
-                </a>
-                <a href="https://www.youtube.com/watch?v=fCvCiyHhi5s" target="_blank" class="artigo-item">
-                    <img src="{% static 'images/bf.png' %}" alt="Black Friday">
-                    <h3>BLACK FRIDAY</h3>
-                    <p>Origem</p>
-                </a>
-                <a href="https://www.youtube.com/watch?v=Nj0AN2p1coQ" target="_blank" class="artigo-item">
-                    <img src="{% static 'images/economia.png' %}" alt="Economia">
-                    <h3>ECONOMIA</h3>
-                    <p>O que é?</p>
-                </a>
-                <a href="https://www.youtube.com/watch?v=WqByBgcMWAA" target="_blank" class="artigo-item">
-                    <img src="{% static 'images/taxajuros.png' %}" alt="Taxa de Juros">
-                    <h3>TAXA DE JUROS</h3>
-                    <p>Explicação</p>
-                </a>
-            </div>
-        </section>
+        <!-- Grid de Artigos Inicial -->
+        <div id="conteudo-principal" class="artigos-grid">
+            <a href="https://www.youtube.com/watch?v=z64HBkLIsMY" target="_blank" class="artigo-item">
+                <img src="{% static 'images/bitcoin2.png' %}" alt="Bitcoin">
+                <h3>BITCOIN</h3>
+                <p>O que é, como surgiu?</p>
+            </a>
+            <a href="https://www.youtube.com/watch?app=desktop&v=qvcNoZqF4XI" target="_blank" class="artigo-item">
+                <img src="{% static 'images/tributos.png' %}" alt="Tributos">
+                <h3>TRIBUTOS</h3>
+                <p>O que são e tipos?</p>
+            </a>
+            <a href="https://www.youtube.com/watch?v=0us8Oq7TeUg&t=251s" target="_blank" class="artigo-item">
+                <img src="{% static 'images/inflacao.png' %}" alt="Inflação">
+                <h3>INFLAÇÃO</h3>
+                <p>Como surgiu?</p>
+            </a>
+        </div>
 
-        <!-- Botão "Veja Mais" -->
-        <button class="ver-mais">Veja Mais</button>
+        <!-- Conteúdo adicional escondido -->
+        <div id="conteudo-adicional" class="artigos-grid" style="display: none;">
+            <a href="https://www.youtube.com/watch?v=fCvCiyHhi5s" target="_blank" class="artigo-item">
+                <img src="{% static 'images/bf.png' %}" alt="Black Friday">
+                <h3>BLACK FRIDAY</h3>
+                <p>Origem</p>
+            </a>
+            <a href="https://www.youtube.com/watch?v=Nj0AN2p1coQ" target="_blank" class="artigo-item">
+                <img src="{% static 'images/economia.png' %}" alt="Economia">
+                <h3>ECONOMIA</h3>
+                <p>O que é?</p>
+            </a>
+            <a href="https://www.youtube.com/watch?v=WqByBgcMWAA" target="_blank" class="artigo-item">
+                <img src="{% static 'images/taxajuros.png' %}" alt="Taxa de Juros">
+                <h3>TAXA DE JUROS</h3>
+                <p>Explicação</p>
+            </a>
+        </div>
+
+        <!-- Botão "Ver Mais" -->
+        <button id="ver-mais" class="ver-mais">Ver Mais</button>
     </main>
+
+    <!-- Adicione o JavaScript -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const verMaisBtn = document.getElementById("ver-mais");
+            const conteudoAdicional = document.getElementById("conteudo-adicional");
+
+            verMaisBtn.addEventListener("click", function () {
+                if (conteudoAdicional.style.display === "none") {
+                    conteudoAdicional.style.display = "grid"; // Mostra conteúdo
+                    verMaisBtn.textContent = "Ver Menos"; // Altera texto do botão
+                } else {
+                    conteudoAdicional.style.display = "none"; // Esconde conteúdo
+                    verMaisBtn.textContent = "Ver Mais"; // Volta texto do botão
+                }
+            });
+        });
+    </script>
+
 </body>
 </html>
