@@ -18,9 +18,9 @@ def suporte(request):
                 telefone=form.cleaned_data['telefone'],
                 mensagem=form.cleaned_data['mensagem']
             )
-            return redirect('sucesso')  # Redireciona após o envio com sucesso
+            return redirect('sucesso') 
     else:
-        form = MensagemSuporte()  # Cria um formulário vazio para GET
+        form = MensagemSuporte()  
     return render(request, 'suporte.html', {'form': form})
 
 def noticias(request):
@@ -76,3 +76,12 @@ def jogoInov(request):
 
 def jogoTec(request):
     return render(request, 'jogotec.html')
+
+def sobrenos(request):
+    return render(request, 'sobrenos.html')
+
+def esqueceusenha(request):
+    return render(request, 'esqueceusenha.html')
+
+def senhanova(request):
+    return render(request, 'senhanova.html')

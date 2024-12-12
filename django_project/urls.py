@@ -9,6 +9,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),  
     path('suporte/', views.suporte, name='suporte'),
     path('sucesso/', views.sucesso_view, name='sucesso'),
+    path('sobrenos/', views.sobrenos, name='sobrenos'),
     path('inicio/', views.inicio, name='inicio'),
     path('jogos/', views.jogos, name='jogos'),
     path('perfil/', views.perfil, name='perfil'),
@@ -19,5 +20,8 @@ urlpatterns = [
     path('jogofin/', views.jogoFin, name='jogofin'),
     path('noticiatec/', views.NotTecnologia, name='noticiatec'),
     path('noticiafin/', views.NotFinancas, name='noticiafin'),
-    path('noticiainov/', views.NotInovacao, name='noticiainov')
+    path('noticiainov/', views.NotInovacao, name='noticiainov'),
+    path('login/', views.login, name='login'),
+    path('esqueceusenha/', views.esqueceusenha, name='esqueceusenha'),
+    path('senhanova/', views.senhanova, name='senhanova'),
 ]

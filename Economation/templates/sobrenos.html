@@ -14,15 +14,15 @@
             <div class="logo-container">
                 <img src="{% static 'images/logo.png' %}" alt="Logo da Economation" class="logo">
                 <h1 class="header-title">Economation</h1>
-                
+
             </div>
             <div class="user-circle"></div>
             </div>
             <nav class="nav-links">
-                <a href="#artigos">Início</a>
-                <a href="#noticias">Notícias</a>
-                <a href="#eventos">Artigos</a>
-                <a href="#contato">Jogos</a>
+                <a href="{% url 'inicio' %}">Início</a>
+                <a href="{% url 'noticias' %}">Notícias</a>
+                <a href="{% url 'artigos' %}">Artigos</a>
+                <a href="{% url 'jogos' %}">Jogos</a>
             </nav>
         </div>
         <div class="circle"></div>
@@ -92,9 +92,9 @@
 
         <!-- Links centrais -->
         <div class="links">
-            <a href="sobre.html">Sobre Nós</a>
-            <a href="suporte.html">Suporte</a>
-        </div>
+            <a href="{% url 'sobrenos' %}">Sobre Nós</a>
+            <a href="{% url 'suporte' %}">Suporte</a>
+        </div>        
 
         <!-- Ícones sociais -->
         <div class="social">
