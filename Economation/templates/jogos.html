@@ -45,28 +45,28 @@
       </div>
 
       <div class="quiz">
-          <h2>Quiz da Semana</h2>
-          <hr>
-          <div class="caixa">
-              <div class="quiz-item">
-                <a href="jogofin.html">
-                  <img src="{% static 'images/amarelo.png' %}" alt="Finanças">
-                  <span>Finanças</span>
+        <h2>Quiz da Semana</h2>
+        <hr>
+        <div class="caixa">
+            <div class="quiz-item">
+                <a href="{% url 'jogofin' %}">
+                    <img src="{% static 'images/amarelo.png' %}" alt="Finanças">
+                    <span>Finanças</span>
                 </a>
-              </div>
-              <div class="quiz-item">
-                <a href="{% url 'jogos' %}">
-                  <img src="{% static 'images/roxo.png' %}" alt="Inovação">
-                  <span>Inovação</span>
-                  </a>
-              </div>
-              <div class="quiz-item" >
-                <a href="jogotec.html">
-                  <img src="{% static 'images/azul.png' %}" alt="Tecnologia">
-                  <span>Tecnologia</span>
-                  </a>
-              </div>
-          </div>
-      </div>
+            </div>
+            <div class="quiz-item">
+                <a href="{% url 'jogoinov' %}">
+                    <img src="{% static 'images/roxo.png' %}" alt="Inovação">
+                    <span>Inovação</span>
+                </a>
+            </div>
+            <div class="quiz-item">
+                <a href="{% url 'jogotec' %}">
+                    <img src="{% static 'images/azul.png' %}" alt="Tecnologia">
+                    <span>Tecnologia</span>
+                </a>
+            </div>
+        </div>
+    </div>        
   </body>
   </html>

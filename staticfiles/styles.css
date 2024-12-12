@@ -1,0 +1,484 @@
+/* Configurações gerais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+/* Cabeçalho */
+.header {
+    background-color: #001f3f;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.logo {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+.user-circle {
+    position: fixed; /* Fixado dentro da viewport */
+    right: 20px; /* Alinhado à direita */
+    top: 20px; /* Alinhado no topo */
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 100; /* Certifica-se de que o círculo fique visível acima de outros elementos */
+}
+
+/* Navegação */
+nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 20px;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    transform: translateY(-3px); /* Texto sobe ao passar o mouse */
+}
+
+/* Seção de Filtros e Busca */
+.actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    gap: 15px;
+}
+
+.filter-button {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Espaço entre o ícone e o texto */
+    background: none;
+    border: none;
+    color: #001f3f;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.filter-button img {
+    width: 20px;
+    height: 20px;
+}
+
+.filter-button:hover {
+    color: #004080; /* Leve destaque ao passar o mouse */
+}
+
+input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    flex: 1; /* Ajusta para ocupar espaço flexível */
+}
+
+.search-button {
+    background-color: #001f3f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.search-button:hover {
+    background-color: #004080;
+}
+
+
+/* Configuração do grid para o layout */
+.grid {
+  display: grid;
+  grid-template-areas:
+    "grande pequeno1"
+    "grande pequeno2";
+  grid-template-columns: 2fr 1fr;
+  gap: 10px;
+  margin: 20px;
+}
+
+.item {
+  position: relative;
+}
+
+.item img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  transition: transform 0.3s;
+}
+
+.item img:hover {
+  transform: scale(1.05);
+}
+
+/* Estilo para a imagem maior */
+.grande {
+  grid-area: grande;
+}
+
+/* Estilo para as imagens menores */
+.pequeno1 {
+  grid-area: pequeno1;
+}
+
+.pequeno2 {
+  grid-area: pequeno2;
+}
+
+/* Lista de notícias */
+.noticias-lista {
+    margin-top: 40px;
+    padding: 0 20px;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.noticia {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: calc(100% - 40px); /* Ocupa toda a largura com espaçamento */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.noticia:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.noticia a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+    width: 100%;
+}
+
+.noticia img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-right: 15px;
+    transition: transform 0.3s;
+}
+
+.noticia img:hover {
+    transform: scale(1.1);
+}
+
+.noticia-texto {
+    flex: 1;
+}
+
+.noticia-texto .titulo {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0 0 5px;
+}
+
+.noticia-texto .data {
+    font-size: 14px;
+    color: gray;
+    margin: 0;
+}
+
+/* Linha separadora */
+hr {
+    border: 0;
+    border-top: 1px solid #ddd;
+    margin: 15px 0;
+}
+
+/* Botão "Veja Mais" */
+.ver-mais {
+    display: block;
+    margin: 30px auto;
+    padding: 10px 20px;
+    background-color: #004080;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.ver-mais:hover {
+    background-color: #002f5f;
+}
+
+/* Grid de Artigos */
+.artigos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Configura 3 colunas fixas */
+    gap: 20px; /* Espaçamento entre os itens */
+    margin: 20px auto;
+    max-width: 1000px;
+}
+
+.artigo-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.artigo-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.artigo-item img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    transition: transform 0.3s;
+}
+
+.artigo-item img:hover {
+    transform: scale(1.1);
+}
+
+.artigo-item h3 {
+    font-size: 18px;
+    margin: 0 0 5px;
+    color: #004080;
+    font-weight: bold;
+}
+
+.artigo-item p {
+    font-size: 14px;
+    color: gray;
+    margin: 0;
+}
+
+/* Botão "Veja Mais" */
+.ver-mais {
+    display: block;
+    margin: 30px auto;
+    padding: 10px 20px;
+    background-color: #004080;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    max-width: 200px;
+}
+
+.ver-mais:hover {
+    background-color: #002f5f;
+}
+
+.fale-suporte {
+    width: 100%;
+    max-width: 500px; /* Ajuste conforme necessário */
+    margin: 125px auto 0;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.fale-suporte h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.input-box {
+    margin-bottom: 15px; /* Espaço entre os campos */
+}
+
+.contact-form-input,
+.contact-form-textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Para incluir padding e border no cálculo do width */
+    z-index: 1;
+}
+
+.contact-form-textarea {
+    height: 150px; /* Ajuste o tamanho da área de texto conforme necessário */
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #001f3f;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.logo-cortada {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    z-index: 10;
+    margin: 0;
+    padding: 0;
+}
+
+.logo-cortada img {
+    width: 850px;
+    height: auto;
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+.sucesso-container {
+    text-align: center;
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%;  /* Limita a largura da caixa de mensagem */
+    max-width: 600px;  /* Limita a largura máxima */
+    margin: 20px auto;  /* Garante o centro da tela */
+}
+
+.sucesso-container h2 {
+    color: #4CAF50;
+    font-size: 2em;
+}
+
+.sucesso-container p {
+    font-size: 1.2em;
+    color: #333;
+}
+
+.sucesso-container a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.sucesso-container a:hover {
+    background-color: #0056b3;
+}
+
+/* Dropdown Filtros */
+.dropdown {
+    position: relative;
+    display: flex;
+    width: 300px;
+    margin-left: 20px;
+}
+
+.filter-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: none;
+    border: none;
+    color: #001f3f;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none; /* Escondido inicialmente */
+    position: absolute;
+    background-color: white;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 10px 0;
+    border-radius: 5px;
+    z-index: 1;
+    width: 200px; /* Largura do dropdown */
+}
+
+.dropdown-content a {
+    display: block; /* Cada imagem ocupa uma linha */
+    text-align: center;
+    margin-bottom: 10px; /* Espaçamento entre as imagens */
+}
+
+.filter-image {
+    width: 100px; /* Tamanho reduzido */
+    margin: 0 auto;
+    transition: transform 0.3s;
+}
+
+.filter-image:hover {
+    transform: scale(1.1); /* Zoom ao passar o mouse */
+}
+
+.filtro-busca{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-block: 20px;
+}
+
+.btn-buscar{
+    margin-right: 20px;
+}

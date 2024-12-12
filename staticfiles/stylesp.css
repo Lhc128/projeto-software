@@ -1,0 +1,312 @@
+/* Geral */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0d1b2a;
+    color: #e0e1dd;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1, h2, h3 {
+    margin: 0;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  .btn, .logout-btn {
+    display: inline-block;
+    background-color: #e0e1dd;
+    color: #0d1b2a;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  .btn:hover, .logout-btn:hover {
+    background-color: #bcc0c7;
+    text-decoration: none;
+  }
+  
+  /* Cabeçalho */
+  header {
+    display: flex;
+    align-items: center;
+    background-color: #1b263b;
+    padding: 15px 30px;
+  }
+  
+  header h1 {
+    font-size: 1.5rem;
+  }
+  
+  header nav a {
+    margin: 0 20px;
+    color: #e0e1dd;
+    font-size: 1rem;
+  }
+
+  header nav{
+    margin-left: 400px;
+  }
+
+  nav .hover-link {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block; /* Necessário para usar transform */
+    transition: transform 0.3s ease; /* Adiciona a transição suave */
+  }
+  
+  nav .hover-link:hover {
+    transform: translateY(-5px); /* Move o texto 5px para cima */
+  }
+
+  /* Perfil */
+  .profile {
+    display: flex;
+    align-items: center;
+    padding: 20px 30px;
+  }
+  
+  .profile-picture {
+    flex: 0.8;
+  }
+  
+  .picture-placeholder {
+    width: 200px;
+    height: 200px;
+    background-color: #1b263b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 2rem;
+    margin-left: 100px;
+  }
+  
+  .profile-info {
+    flex: 2;
+    padding-left: 20px;
+  }
+  
+  .profile-info h2 {
+    margin-bottom: 10px;
+  }
+  
+  .profile-info p {
+    margin: 10px 0;
+  }
+  
+  /* Visão Geral */
+  .overview {
+    padding: 20px 30px;
+  }
+  
+  .overview-cards {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .card {
+    background-color: #1b263b;
+    padding: 8px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 1;
+  }
+  
+  .card span {
+    font-size: 2rem;
+  }
+  
+  .card div p:first-child {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 2px; /* Reduz a distância abaixo do número */
+}
+
+.card div p:last-child {
+    margin-top: 0; /* Remove qualquer margem superior no texto */
+    line-height: 1.5; /* Ajusta o espaçamento entre linhas */
+}
+
+  /* Conquistas */
+  /* Conquistas */
+  .achievements {
+    padding: 20px 30px;
+    padding-left: 30px;
+  }
+  
+  .achievement-box {
+    background-color: #1b263b; /* Fundo escuro */
+    padding: 30px; /* Espaçamento interno */
+    border-radius: 5px; /* Bordas arredondadas */
+    display: flex; /* Alinha horizontalmente */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+  }
+  
+  .conquistas {
+      display: flex; /* Alinha os itens horizontalmente */
+      align-items: center; /* Centraliza verticalmente os itens */
+      justify-content: space-between; /* Espaça os itens uniformemente */
+      gap: 20px; /* Espaço entre os textos e as barras */
+      width: 100%; /* Ocupa toda a largura disponível */
+      max-width: 600px; /* Limita a largura da seção */
+  }
+  
+  .item {
+      flex-grow: 1; /* Cada item ocupa a mesma proporção */
+      text-align: center; /* Centraliza o texto */
+  }
+  
+  .texto {
+      font-size: 24px; /* Tamanho da fonte */
+      color: #e0e1dd; /* Cor do texto */
+  }
+  
+  .barra {
+      width: 1px; /* Largura da barra */
+      height: 30px; /* Altura da barra */
+      background-color: #e0e1dd; /* Cor da barra */
+      align-self: stretch; /* Faz a barra preencher verticalmente */
+  }
+  
+  
+  /* Rodapé */
+  footer {
+    text-align: right;
+    padding: 20px 30px;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  /* Configurações gerais */
+  body2 {
+      font-family: 'Montserrat', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #14213d; /* Azul escuro */
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+  }
+  
+  .perfil-page-container {
+      width: 90%;
+      max-width: 400px;
+      text-align: center;
+  }
+  
+  /* Ícone de voltar */
+  .perfil-back-arrow {
+      font-size: 20px;
+      color: white;
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      cursor: pointer;
+  }
+  
+  /* Cabeçalho */
+  .perfil-header-title {
+      font-size: 24px;
+      margin-bottom: 20px;
+  }
+  
+  /* Seção de foto */
+  .perfil-foto-container {
+      margin-bottom: 20px;
+  }
+  
+  .perfil-foto-placeholder {
+      width: 100px;
+      height: 100px;
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+  }
+  
+  .perfil-plus-icon {
+      font-size: 24px;
+      color: white;
+      font-weight: bold;
+  }
+  
+  .perfil-mudar-foto-texto {
+      font-size: 14px;
+      margin-top: 10px;
+  }
+  
+  /* Formulário */
+  .perfil-formulario {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+  }
+  
+  .perfil-formulario label {
+      font-size: 14px;
+      text-align: left;
+      color: white;
+  }
+  
+  .perfil-formulario input {
+      background-color: #394867;
+      border: none;
+      border-radius: 5px;
+      padding: 10px;
+      color: white;
+      font-size: 14px;
+      outline: none;
+  }
+  
+  .perfil-formulario input::placeholder {
+      color: #cccccc;
+  }
+  
+  /* Botão salvar */
+  .perfil-salvar-button {
+      background-color: white;
+      color: #14213d;
+      border: none;
+      border-radius: 5px;
+      padding: 10px;
+      font-size: 14px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s;
+  }
+  
+
+  
+  
+  
+  
+  

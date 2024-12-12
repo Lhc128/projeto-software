@@ -1,6 +1,10 @@
 from django.shortcuts import render, redirect
 from django import forms
-from .models import MensagensSuporte
+from .models import MensagensSuporte, Cadastro
+from .forms import CadastroForm
+from django.contrib.auth.models import User
+from django.contrib import messages
+
 
 class MensagemSuporte(forms.Form):
     nome = forms.CharField(max_length=100)
@@ -18,7 +22,7 @@ def suporte(request):
                 telefone=form.cleaned_data['telefone'],
                 mensagem=form.cleaned_data['mensagem']
             )
-            return redirect('sucesso') 
+            return redirect('sucesso_mensagem') 
     else:
         form = MensagemSuporte()  
     return render(request, 'suporte.html', {'form': form})
@@ -29,8 +33,8 @@ def noticias(request):
 def artigos(request):
     return render(request, 'artigos.html')
 
-def sucesso_view(request):
-    return render(request, 'sucesso.html')
+def sucesso_mensagem(request):
+    return render(request, 'sucesso_mensagem.html')
 
 def inicio(request):
     return render(request, 'inicio.html')
@@ -66,7 +70,14 @@ def login(request):
     return render(request,'login.html')
 
 def cadastro(request):
-    return render(request,'cadastro.html')
+    if request.method == 'POST':
+        form = CadastroForm(request.POST)
+        if form.is_valid():
+            form.save()  # Salva o novo usuário no banco de dados
+            return redirect('sucesso_cadastro')  # Redireciona para a página de sucesso
+    else:
+        form = CadastroForm()  # Cria um formulário vazio
+    return render(request, 'cadastro.html', {'form': form})
 
 def jogoFin(request):
     return render(request, 'jogofin.html')
@@ -85,3 +96,6 @@ def esqueceusenha(request):
 
 def senhanova(request):
     return render(request, 'senhanova.html')
+
+def sucesso_cadastro(request):
+    return render(request, 'sucesso_cadastro.html')
