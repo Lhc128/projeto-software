@@ -1,0 +1,640 @@
+/* Configurações gerais */
+body {
+    font-family: Montserrat, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+/* Cabeçalho */
+.header {
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+.user-circle {
+    position: fixed; /* Fixado dentro da viewport */
+    right: 20px; /* Alinhado à direita */
+    top: 20px; /* Alinhado no topo */
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 100; /* Certifica-se de que o círculo fique visível acima de outros elementos */
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 20px;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    transform: translateY(-3px); /* Texto sobe ao passar o mouse */
+}
+
+/* Seção de Filtros e Busca */
+.actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    gap: 15px;
+}
+
+.filter-button {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Espaço entre o ícone e o texto */
+    background: none;
+    border: none;
+    color: #001f3f;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.filter-button img {
+    width: 20px;
+    height: 20px;
+}
+
+.filter-button:hover {
+    color: #004080; /* Leve destaque ao passar o mouse */
+}
+
+input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    flex: 1; /* Ajusta para ocupar espaço flexível */
+}
+
+.search-button {
+    background-color: #001f3f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.search-button:hover {
+    background-color: #004080;
+}
+
+
+/* Configuração do grid para o layout */
+.grid {
+  display: grid;
+  grid-template-areas:
+    "grande pequeno1"
+    "grande pequeno2";
+  grid-template-columns: 2fr 1fr;
+  gap: 10px;
+  margin: 20px;
+}
+
+.item {
+  position: relative;
+}
+
+.item img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  transition: transform 0.3s;
+}
+
+.item img:hover {
+  transform: scale(1.05);
+}
+
+/* Estilo para a imagem maior */
+.grande {
+  grid-area: grande;
+}
+
+/* Estilo para as imagens menores */
+.pequeno1 {
+  grid-area: pequeno1;
+}
+
+.pequeno2 {
+  grid-area: pequeno2;
+}
+
+/* Lista de notícias */
+.noticias-lista {
+    margin-top: 40px;
+    padding: 0 20px;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.noticia {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: calc(100% - 40px); /* Ocupa toda a largura com espaçamento */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.noticia:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.noticia a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+    width: 100%;
+}
+
+.noticia img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-right: 15px;
+    transition: transform 0.3s;
+}
+
+.noticia img:hover {
+    transform: scale(1.1);
+}
+
+.noticia-texto {
+    flex: 1;
+}
+
+.noticia-texto .titulo {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0 0 5px;
+}
+
+.noticia-texto .data {
+    font-size: 14px;
+    color: gray;
+    margin: 0;
+}
+
+/* Linha separadora */
+hr {
+    border: 0;
+    border-top: 1px solid #ddd;
+    margin: 15px 0;
+}
+
+/* Botão "Veja Mais" */
+.ver-mais {
+    display: block;
+    margin: 30px auto;
+    padding: 10px 20px;
+    background-color: #004080;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.ver-mais:hover {
+    background-color: #002f5f;
+}
+
+/* Grid de Artigos */
+.artigos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Configura 3 colunas fixas */
+    gap: 20px; /* Espaçamento entre os itens */
+    margin: 20px auto;
+    max-width: 1000px;
+}
+
+.artigo-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.artigo-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.artigo-item img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    transition: transform 0.3s;
+}
+
+.artigo-item img:hover {
+    transform: scale(1.1);
+}
+
+.artigo-item h3 {
+    font-size: 18px;
+    margin: 0 0 5px;
+    color: #004080;
+    font-weight: bold;
+}
+
+.artigo-item p {
+    font-size: 14px;
+    color: gray;
+    margin: 0;
+}
+
+/* Botão "Veja Mais" */
+.ver-mais {
+    display: block;
+    margin: 30px auto;
+    padding: 10px 20px;
+    background-color: #004080;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    max-width: 200px;
+}
+
+.ver-mais:hover {
+    background-color: #002f5f;
+}
+
+/* Dropdown Filtros */
+.dropdown {
+    position: relative;
+    display: flex;
+    width: 300px;
+    margin-left: 20px;
+}
+
+.filter-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: none;
+    border: none;
+    color: #001f3f;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none; /* Escondido inicialmente */
+    position: absolute;
+    background-color: white;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 10px 0;
+    border-radius: 5px;
+    z-index: 1;
+    width: 200px; /* Largura do dropdown */
+}
+
+.dropdown-content a {
+    display: block; /* Cada imagem ocupa uma linha */
+    text-align: center;
+    margin-bottom: 10px; /* Espaçamento entre as imagens */
+}
+
+.filter-image {
+    width: 100px; /* Tamanho reduzido */
+    margin: 0 auto;
+    transition: transform 0.3s;
+}
+
+.filter-image:hover {
+    transform: scale(1.1); /* Zoom ao passar o mouse */
+}
+
+.filtro-busca{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-block: 20px;
+}
+
+.btn-buscar{
+    margin-right: 20px;
+}
+
+
+/* Página de Login e Cadastro */
+.login-cadastro-container {
+    display: flex;
+    height: 100vh; /* Ocupa a altura total da tela */
+    background-color: #f5f5f5;
+    font-family: Montserrat, sans-serif;
+    position: relative; /* Necessário para posicionar a imagem central */
+}
+
+/* Cabeçalho Economation */
+.header-economation {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 16px; /* Tamanho pequeno */
+    font-weight: bold;
+    color: white;
+    z-index: 10;
+}
+
+/* Seção de Login */
+.login-section {
+    flex: 0.7; /* Parte azul menor */
+    background-color: #142337; /* Azul escuro */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; /* Texto alinhado à esquerda */
+    padding: 40px;
+    position: relative;
+}
+
+.login-section h2 {
+    font-size: 36px; /* Aumenta o título */
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.login-section p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.login-section .login-button {
+    text-decoration: none;
+    background-color: #FFD700; /* Amarelo */
+    color: #142337;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 50px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login-section .login-button:hover {
+    background-color: #FFC700;
+}
+
+/* Seção de Cadastro */
+.cadastro-section {
+    flex: 1.2; /* Parte branca maior */
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centraliza o conteúdo */
+    align-items: center;
+    position: relative;
+    padding: 20px; /* Reduz padding geral */
+}
+
+/* Imagem decorativa */
+.central-image {
+    position: absolute;
+    width: 250px; /* Ajuste o tamanho da largura */
+    height: 600px; /* Mantém a proporção */
+    top: 50%; /* Centraliza verticalmente */
+    left: 43%; /* Centraliza horizontalmente */
+    transform: translate(-50%, -50%); /* Ajuste para centralizar exatamente */
+    z-index: 5; /* Garante que a imagem esteja visível acima do conteúdo */
+}
+
+/* Texto da seção de cadastro */
+.cadastro-section h2 {
+    font-size: 36px; /* Aumenta o título */
+    margin-bottom: 10px;
+    color: #142337;
+    font-weight: bold;
+    text-align: center;
+}
+
+.cadastro-section p {
+    font-size: 16px;
+    margin-bottom: 30px;
+    color: #555;
+    text-align: center;
+}
+
+/* Formulário de cadastro */
+.cadastro-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center; /* Centraliza os campos */
+    width: 100%; /* Ocupa toda a largura */
+}
+
+.cadastro-form .form-group {
+    display: flex;
+    align-items: center;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 100%;
+    max-width: 400px; /* Limita o tamanho das caixas */
+}
+
+.cadastro-form .form-group input {
+    border: none;
+    outline: none;
+    background: none;
+    width: 100%;
+    font-size: 14px;
+    margin: 0; /* Remove margens adicionais */
+    padding: 0; /* Remove padding adicional */
+    box-sizing: border-box;
+}
+
+.cadastro-form .form-group label {
+    margin-right: 10px;
+    color: #777;
+}
+
+.cadastro-form .submit-button {
+    text-decoration: none;
+    background-color: #FFD700;
+    color: #142337;
+    border: none;
+    text-align: center;
+    border-radius: 10px;
+    padding: 10px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+    max-width: 300px; /* Mesma largura das caixas de input */
+}
+
+.cadastro-form .submit-button:hover {
+    background-color: #FFC700;
+}
+
+/* Estilo Responsivo */
+@media (max-width: 768px) {
+    .login-cadastro-container {
+        flex-direction: column;
+    }
+
+    .login-section, .cadastro-section {
+        flex: none;
+        width: 100%;
+        height: auto;
+        padding: 20px;
+    }
+
+    .header-economation {
+        left: 10px;
+        top: 10px;
+        font-size: 14px;
+    }
+
+    .central-image {
+        width: 150px; /* Reduz tamanho para telas menores */
+    }
+}
+
+
+.forgot-password-link {
+    font-size: 14px;
+    color: #555;
+    text-decoration: none;
+    margin: 5px 0 10px;
+    display: inline-block;
+    text-align: left;
+    width: 100%;
+    padding-left: 260px;
+}
+
+.forgot-password-link:hover {
+    color: #142337;
+    text-decoration: underline;
+}
+
+.signup-link {
+    font-size: 14px;
+    color: #555;
+    margin-top: 15px;
+    text-align: center;
+}
+
+.signup-link a {
+    color: #142337;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
+}
+
+
+/* Bloco para o código de verificação */
+.code-verification {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.code-input {
+    width: 50px; /* Tamanho do bloco */
+    height: 50px; /* Altura do bloco */
+    font-size: 24px; /* Fonte maior para melhor visualização */
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f4f4f4;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.code-input:focus {
+    border-color: #FFD700; /* Cor ao focar no bloco */
+    background-color: #fff;
+}
+
+/* Ajuste do botão */
+.submit-button {
+    background-color: #FFD700;
+    color: #142337;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 50px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-align: center;
+}
+
+.submit-button:hover {
+    background-color: #FFC700;
+}
+
+

@@ -1,0 +1,180 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+/* Cabeçalho */
+.header {
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    background-color: #14213d; /* Cor do fundo do cabeçalho */
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.logo {
+    width: 50px;
+    height: 65px !important;
+    margin-right: 10px;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+/* Círculo branco no canto superior direito */
+.user-circle {
+    position: absolute;
+    top: 20px;
+    right: 20px; /* Alinha o círculo no canto direito */
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 20px;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+nav a:hover {
+    transform: translateY(-3px); /* Texto sobe ao passar o mouse */
+}
+
+/* Navbar */
+/* Seção "Quer aprender mais?" */
+.podio {
+    text-align: center;
+    padding: 40px;
+    background-color: white; /* Mesma cor da seção "Você sabe o que é?" */
+}
+
+/* Título */
+.podio h2 {
+    font-size: 24px;
+    color: #333;
+    margin: 0;
+    text-align: left;
+    border-bottom: 2px solid #001F3F; /* Linha abaixo do título */
+    padding-bottom: 10px;
+    margin-bottom: 30px; /* Espaço entre a linha e a imagem */
+}
+
+/* Imagem de ranking */
+.podio img {
+    display: block; /* Para centralizar, em conjunto com margin */
+    margin: 0 auto;
+    width: 400px; /* Tamanho da imagem */
+    height: 300px; /* Mantém proporção */
+    margin-bottom: 20px; /* Espaço entre a imagem e o botão */
+}
+
+.ranking {
+    background-color: #d9e1ef;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 600px;
+}
+
+.ranking-item {
+    display: flex;
+    justify-content: space-between;
+    background-color: #14213d;
+    color: white;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.quiz {
+    width: 80%;
+    margin: 20px auto;
+    text-align: left;
+}
+
+.quiz h2 {
+    margin-bottom: 10px;
+}
+
+.quiz .quiz-items {
+    display: flex;
+    gap: 15px;
+}
+
+.quiz-item {
+    display: flex !important; /* Ativa Flexbox */
+    align-items: center !important; /* Alinha verticalmente */
+    gap: 10px !important; /* Espaço entre ícone e texto */
+    background-color: #14213d !important; /* Fundo */
+    color: white !important; /* Cor do texto */
+    padding: 10px !important; /* Espaçamento interno */
+    border: none !important; /* Remove borda */
+    border-radius: 5px !important; /* Bordas arredondadas */
+    width: 100% !important; /* Largura total */
+    box-sizing: border-box !important; /* Inclui padding na largura */
+    text-align: left !important; /* Garante alinhamento à esquerda */
+}
+
+.quiz-item a {
+    display: flex; /* Faz o link ocupar todo o espaço da caixa */
+    color: white; /* Garante que o texto dentro do link tenha a cor correta */
+    text-decoration: none; /* Remove o sublinhado do link */
+    width: 100%; /* Garantir que o link ocupe toda a largura da caixa */
+    align-items: center; /* Alinha os itens dentro do link */
+    gap: 10px;
+}
+
+.quiz-item img {
+    width: 30px !important; /* Tamanho da imagem */
+    height: auto !important; /* Mantém proporções */
+    flex-shrink: 0 !important; /* Impede a redução da imagem */
+    margin: 0 auto !important; /* Centraliza a imagem horizontalmente */
+}
+
+.quiz-item span {
+    flex-grow: 1; /* Permite que o texto ocupe o restante do espaço */
+    color: white !important; /* Cor do texto */
+    font-size: 16px !important; /* Tamanho da fonte */
+    font-weight: normal !important; /* Peso do texto */
+    text-align: left !important; /* Alinha o texto à esquerda */
+}
+
+
+
+.caixa {
+    display: flex; /* Ativa o Flexbox para os itens do quiz */
+    gap: 20px; /* Espaçamento horizontal entre itens */
+    justify-content: flex-start; /* Alinha itens ao início */
+}
+
+
+.quiz-item:hover {
+    background-color: #14213d; /* Cor ao passar o mouse */
+    transform: scale(1.03); /* Efeito de zoom */
+}
+
+

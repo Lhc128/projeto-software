@@ -1,0 +1,357 @@
+/* Configurações gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: #f0f2f5;
+    color: #333;
+}
+
+/* Cabeçalho */
+.main-header {
+    background-color: #121c31;
+    color: #fff;
+    text-align: center;
+    padding: 40px 20px;
+    position: relative;
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.header-nav {
+    display: flex;
+    margin-left: 450px;
+    flex: 1;
+    gap: 30px;
+}
+
+.header-nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.header-nav a:hover {
+    transform: translateY(-5px);
+}
+
+.header-content {
+    margin-top: 180px;
+    text-align: center;
+}
+
+.header-main-title {
+    font-size: 3.3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.header-subtitle {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.header-description {
+    font-size: 1rem;
+    color: #ddd;
+}
+
+.header-description2{
+    font-size: 1rem;
+    margin-bottom: 30px;
+    color: #ddd;
+}
+
+.header-buttons {
+    margin-bottom: 60px;
+}
+
+.cta-button {
+    padding: 15px 30px;
+    border: none;
+    border-radius: 25px;
+    background-color: #ffc107;
+    color: #121c31;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+.cta-button:hover {
+    background-color: #e6a600;
+}
+
+.header-images {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.header-image {
+    width: 250px;
+    height: auto;
+    margin-block-end: 20px;
+}
+
+/* Nossos Valores */
+.values-section {
+    background-color: #BDC9D8;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #121c31;
+    text-align: left;
+    margin: 25px;
+}
+
+.value-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.value-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+}
+
+.value-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    margin-top: 20px;
+    color: #121c31;
+}
+
+.value-card p {
+    font-size: 1rem;
+    text-align: left;
+    margin-left: 10px;
+    margin-block-end: 15px;
+    color: #555;
+}
+
+.value-card img.value-icon {
+    display: block;
+    margin: 35px auto; /* Centraliza a imagem */
+    margin-block-end: 35px;
+    width: 60px; /* Define o tamanho da imagem */
+    height: auto; /* Mantém a proporção */
+}
+
+.value-card img.value-icon2 {
+    display: block;
+    margin: 50px auto; /* Centraliza a imagem */
+    margin-block-end: 45px;
+    width: 90px; /* Define o tamanho da imagem */
+    height: auto; /* Mantém a proporção */
+}
+
+/* Sessões */
+.sessions-section {
+    background-color: #BDC9D8;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.session-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.session-card {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+}
+
+.session-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #121c31;
+    text-align: left;
+    margin: 10px;
+}
+
+.session-card h4 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #121c31;
+    text-align: left;
+    margin: 10px;
+}
+
+.session-card p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 15px;
+    text-align: left;
+    margin-left: 10px;
+}
+
+.session-card ul {
+    list-style: none;
+    margin: 20px 0;
+    padding: 0;
+    text-align: left;
+}
+
+.session-card ul li {
+    margin-bottom: 10px;
+}
+
+a.session-button {
+    display: inline-block;
+    text-decoration: none;
+    padding: 15px 25px;
+    border-radius: 20px;
+    background-color: #ffc107;
+    color: #121c31;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    margin-block-end: 20px;
+    margin-top: 20px;
+}
+
+a.session-button:hover {
+    background-color: #e6a600;
+}
+
+
+/* Quem Somos */
+.about-us-section {
+    background-color: #BDC9D8;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.section-description {
+    margin-bottom: 30px;
+    font-size: 1rem;
+    color: #555;
+    text-align: left;
+    margin: 25px;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Três colunas */
+    gap: 10px;
+    justify-items: left; /* Centraliza os itens */
+    margin-left: 40px;
+    align-items: left; /* Centraliza verticalmente os itens */
+}
+
+.team-member {
+    text-align: center;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 250px;
+}
+
+.team-member img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 20%;
+    margin-bottom: 20px;
+}
+
+.team-member p {
+    font-size: 0.8rem;
+    color: #333;
+}
+
+/* Rodapé */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #001F3F; /* Fundo azul escuro igual ao cabeçalho */
+    color: white;
+}
+
+.footer .logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espaço entre a imagem e o texto */
+}
+
+.footer .logo-container img {
+    width: 40px; /* Tamanho da imagem */
+    height: 60px;
+}
+
+.footer .links {
+    display: flex;
+    gap: 20px; /* Espaço entre os links */
+}
+
+.footer .links a {
+    color: white;
+    text-decoration: none; /* Remove sublinhado */
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.footer .social {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px; /* Espaço entre as linhas */
+}
+
+.footer .social a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espaço entre o ícone e o texto */
+}
+
+.footer .social a img {
+    width: 20px; /* Tamanho dos ícones */
+    height: 20px;
+}
