@@ -3,8 +3,9 @@ from django.urls import path
 from Economation import views  
 
 urlpatterns = [
-    path('', views.home, name='home'),
+    path('', views.inicial, name='inicial'),
     path('noticias', views.noticias, name='noticias'),  
+    path('home/', views.home, name = 'home'),
     path('artigos/', views.artigos, name='artigos'),
     path('admin/', admin.site.urls),  
     path('suporte/', views.suporte, name='suporte'),
@@ -25,4 +26,5 @@ urlpatterns = [
     path('login/', views.login, name='login'),
     path('esqueceusenha/', views.esqueceusenha, name='esqueceusenha'),
     path('senhanova/', views.senhanova, name='senhanova'),
+    path('inicial/', views.inicial, name = 'inicial')
 ]

@@ -99,3 +99,6 @@ def senhanova(request):
 
 def sucesso_cadastro(request):
     return render(request, 'sucesso_cadastro.html')
+
+def inicial(request):
+    return render(request, 'inicial.html')
